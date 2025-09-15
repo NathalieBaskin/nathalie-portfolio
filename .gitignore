@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# 🚫 Ignorera stora video- och bildfiler
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+*.psd
+*.tiff
+*.tif
+*.raw
+*.heic
+
+# ✅ Men tillåt små statiska assets i public/
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.jpeg
+!public/**/*.gif
+!public/**/*.svg
