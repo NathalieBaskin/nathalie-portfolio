@@ -1,5 +1,27 @@
 import Image from "next/image";
 
+// Data till "Senaste projekt"
+const latestProjects = [
+  {
+    src: "/videos/backend-ett.mp4",
+    title: "RIFTHUB",
+    caption:
+      "Backend 1. Socialt community byggt i React med SQLite3 (relationsdatabas) och Tailwind: användarhantering (skapa/uppdatera/radera), in-/utloggning, vänner, chatt, forum, livestreaming och adminpanel.",
+  },
+  {
+    src: "/videos/javascript-2.mp4",
+    title: "NABASKI",
+    caption:
+      "JavaScript 2. Eget projekt: portfolio byggt i React med bokningssystem, kopplat till SQLite3.",
+  },
+  {
+    src: "/videos/javascript-3.mp4",
+    title: "Derma Nordic Med Spa",
+    caption:
+      "JavaScript 3. SPA för en spa-klinik byggt i Angular (TypeScript) med bokningssystem och webbshop, kopplat till SQLite3.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
@@ -24,9 +46,14 @@ export default function Home() {
             alt="Nathalie photographer and coder"
             width={2000}
             height={1000}
-            className="w-full"
-            sizes="(min-width:1536px) 2000px, (min-width:1280px) 1800px, (min-width:1024px) 1600px, (min-width:768px) 1000px, 100vw"
             priority
+            className="
+    w-full
+    h-[25vh]        /* 📱 Mobil: större hero-bild */
+    sm:h-auto       /* 💻 iPad & uppåt: normal auto-höjd */
+    object-cover    /* beskär kanter snyggt */
+  "
+            sizes="(min-width:1536px) 2000px, (min-width:1280px) 1800px, (min-width:1024px) 1600px, (min-width:768px) 1000px, 100vw"
           />
 
           {/* TEXTER – alltid mitt i bildens höjd, med trygg inre marginal */}
@@ -59,29 +86,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projekt */}
-      <section id="projects" className="max-w-5xl mx-auto px-6 py-16 text-center md:text-left">
-        <h2 className="text-3xl font-bold mb-6">Projekt</h2>
-        <p className="text-slate-600">Här kommer jag visa mina projekt (t.ex. RiftHub, portfolio, m.m.)</p>
-      </section>
+      {/* Senaste projekt */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold mb-8 text-center md:text-left">
+          Senaste projekt
+        </h2>
 
-      {/* Om mig */}
-      <section id="about" className="max-w-5xl mx-auto px-6 py-16 text-center md:text-left">
-        <h2 className="text-3xl font-bold mb-6">Om mig</h2>
-        <p className="text-slate-600">
-          Jag är en frontend-utvecklare som älskar att bygga moderna, responsiva webblösningar och experimentera med design.
-        </p>
-      </section>
+        {/* Grid: 1 kolumn på mobil, 3 kolumner från iPad och uppåt */}
+        <ul className="grid gap-8 md:grid-cols-3">
+          {latestProjects.map((p) => (
+            <li
+              key={p.src}
+              className="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition"
+            >
+              {/* Videoyta */}
+              <div className="aspect-video w-full overflow-hidden rounded-lg bg-slate-100">
+                <video
+                  className="h-full w-full"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src={p.src} type="video/mp4" />
+                  Din webbläsare kan tyvärr inte spela upp videon.
+                </video>
+              </div>
 
-      {/* Kontakt */}
-      <section id="contact" className="max-w-5xl mx-auto px-6 py-16 text-center md:text-left">
-        <h2 className="text-3xl font-bold mb-6">Kontakt</h2>
-        <p className="text-slate-600">
-          Maila mig på{" "}
-          <a href="mailto:dinmail@example.com" className="underline text-indigo-500">dinmail@example.com</a>{" "}
-          eller hitta mig på{" "}
-          <a href="https://github.com/ditt-github" target="_blank" className="underline text-indigo-500">GitHub</a>.
-        </p>
+              {/* Titel + text */}
+              <h3 className="mt-4 text-xl font-bold text-black">{p.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                {p.caption}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );
