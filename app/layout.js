@@ -34,6 +34,9 @@ export default function RootLayout({ children }) {
                 <Link href="/photo/portfolio" className="hover:text-indigo-400">
                   Portfolio
                 </Link>
+                <Link href="/photo/priser" className="hover:text-indigo-400">
+                  Priser
+                </Link>
                 <Link href="/photo/contact" className="hover:text-indigo-400">
                   Kontakt
                 </Link>
