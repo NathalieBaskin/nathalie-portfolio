@@ -1,35 +1,45 @@
-import Image from "next/image";
+"use client";
 
-// Data till "Senaste projekt"
-const latestProjects = [
-  {
-    src: "/videos/backend-ett.mp4",
-    title: "RIFTHUB",
-    caption:
-      "Backend 1. Socialt community byggt i React med SQLite3 (relationsdatabas) och Tailwind: användarhantering (skapa/uppdatera/radera), in-/utloggning, vänner, chatt, forum, livestreaming och adminpanel.",
-  },
-  {
-    src: "/videos/javascript-2.mp4",
-    title: "NABASKI",
-    caption:
-      "JavaScript 2. Eget projekt: portfolio byggt i React med bokningssystem, kopplat till SQLite3.",
-  },
-  {
-    src: "/videos/javascript-3.mp4",
-    title: "Derma Nordic Med Spa",
-    caption:
-      "JavaScript 3. SPA för en spa-klinik byggt i Angular (TypeScript) med bokningssystem och webbshop, kopplat till SQLite3.",
-  },
-];
+import Image from "next/image";
+import { useLanguage } from "./components/LanguageProvider";
 
 export default function Home() {
+  const { t } = useLanguage();
+
+  const latestDevProjects = [
+    { src: "/videos/backend-ett.mp4", title: "RIFTHUB" },
+    { src: "/videos/javascript-2.mp4", title: "NABASKI" },
+    { src: "/videos/javascript-3.mp4", title: "Derma Nordic Med Spa" },
+    { src: "/videos/javascript-1.mp4", title: "Freaky Fashion" },
+  ];
+
+  const latestPhotoProjects = [
+    {
+      key: "wedding",
+      title: t("photo.categories.wedding"),
+      caption: t("photo.categoryCaptions.wedding"),
+    },
+    {
+      key: "children",
+      title: t("photo.categories.children"),
+      caption: t("photo.categoryCaptions.children"),
+    },
+    {
+      key: "event",
+      title: t("photo.categories.event"),
+      caption: t("photo.categoryCaptions.event"),
+    },
+    {
+      key: "model",
+      title: t("photo.categories.model"),
+      caption: t("photo.categoryCaptions.model"),
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HERO */}
-      {/* -mt-[46px] + pt-[10px] = ~10px under navbar (om nav-höjd ≈ 56px / h-14) */}
       <section className="relative mt-[14px] pt-[56px] pb-8 px-0 overflow-x-hidden">
-        {/* Bild-wrapper: högerställd (ml-auto) så bordet nuddar högerkanten.
-           Mobil: full-bleed (w-screen), iPad: mindre, desktop/monitor: större */}
         <div
           className="
             relative ml-auto
@@ -40,79 +50,95 @@ export default function Home() {
             2xl:max-w-[2000px]
           "
         >
-          {/* Bilden – vi rör inte dess vertikala position, bara storlek per breakpoint */}
           <Image
             src="/hero.png"
-            alt="Nathalie photographer and coder"
+            alt={t("home.heroAlt")}
             width={2000}
             height={1000}
             priority
             className="
-    w-full
-    h-[25vh]        /* 📱 Mobil: större hero-bild */
-    sm:h-auto       /* 💻 iPad & uppåt: normal auto-höjd */
-    object-cover    /* beskär kanter snyggt */
-  "
+              w-full
+              h-[25vh]
+              sm:h-auto
+              object-cover
+            "
             sizes="(min-width:1536px) 2000px, (min-width:1280px) 1800px, (min-width:1024px) 1600px, (min-width:768px) 1000px, 100vw"
           />
 
-          {/* TEXTER – alltid mitt i bildens höjd, med trygg inre marginal */}
-          {/* Visa från iPad (md) och uppåt; göm på mobil */}
-          {/* Vänster */}
+          {/* Left */}
           <div className="hidden md:flex absolute inset-y-0 left-0 items-center pointer-events-none">
             <h1
               className="
-                font-extrabold text-black leading-none
-                text-[clamp(22px,2.4vw,56px)]
-                ml-10 lg:ml-16        /* INRE marginal från vänster kant av bilden */
+                font-extrabold text-black leading-none font-photo
+                text-[clamp(26px,3.2vw,72px)]
+                ml-16 lg:ml-28
               "
             >
-              photographer
+              {t("home.photographer")}
             </h1>
           </div>
 
-          {/* Höger */}
+          {/* Right */}
           <div className="hidden md:flex absolute inset-y-0 right-0 items-center pointer-events-none">
             <h1
               className="
-                font-extrabold text-black leading-none
-                text-[clamp(22px,2.4vw,56px)]
-                mr-10 lg:mr-20        /* INRE marginal från höger kant av bilden */
+                font-extrabold text-black leading-none font-code
+                text-[clamp(26px,3.2vw,72px)]
+                mr-16 lg:mr-28
               "
             >
-              &lt;coder&gt;
+              {t("home.coder")}
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Senaste projekt */}
+      {/* Latest projects */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center md:text-left">
-          Senaste projekt
+          {t("home.latestProjects")}
         </h2>
 
-        {/* Grid: 1 kolumn på mobil, 3 kolumner från iPad och uppåt */}
-        <ul className="grid gap-8 md:grid-cols-3">
-          {latestProjects.map((p) => (
-            <li
-              key={p.src}
-              className="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition"
-            >
-              {/* Videoyta */}
+        <p className="text-xl font-bold mb-4 text-center md:text-left font-code">
+          {t("home.development")}
+        </p>
+
+        <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {latestDevProjects.map((p) => (
+            <li key={p.src} className="space-y-4">
               <div className="aspect-video w-full overflow-hidden rounded-lg bg-slate-100">
                 <video
                   className="h-full w-full"
+                  autoPlay
+                  muted
+                  loop
                   controls
                   preload="metadata"
                   playsInline
                 >
                   <source src={p.src} type="video/mp4" />
-                  Din webbläsare kan tyvärr inte spela upp videon.
+                  {t("common.videoFallback")}
                 </video>
               </div>
 
-              {/* Titel + text */}
+              <h3 className="mt-4 text-xl font-bold text-black">{p.title}</h3>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-12 text-xl font-bold mb-4 text-center md:text-left font-photo">
+          {t("home.photography")}
+        </p>
+
+        <ul className="grid gap-8 md:grid-cols-2">
+          {latestPhotoProjects.map((p) => (
+            <li key={p.key} className="space-y-4">
+              <div className="aspect-video w-full overflow-hidden rounded-lg bg-slate-100 flex items-center justify-center">
+                <span className="text-xs uppercase tracking-[0.2em] text-slate-400">
+                  {t("home.photoLabel")}
+                </span>
+              </div>
+
               <h3 className="mt-4 text-xl font-bold text-black">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 {p.caption}
