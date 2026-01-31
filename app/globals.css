@@ -1,5 +1,61 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cooldex";
+  src: url("/font/Cooldex/Cooldex.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Black Chancery";
+  src: url("/font/black_chancery/BLKCHCRY.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monocode";
+  src: url("/font/Monocode-Regular-V01.02b.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berylium";
+  src: url("/font/Berylium%20Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berylium";
+  src: url("/font/Berylium%20Rg%20It.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berylium";
+  src: url("/font/Berylium%20Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berylium";
+  src: url("/font/Berylium%20Bd%20It.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,7 +78,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Berylium", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.photo-theme :is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Black Chancery", "Times New Roman", serif;
+}
+
+.code-theme :is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Monocode", "Courier New", monospace;
+}
+
+.font-photo {
+  font-family: "Black Chancery", "Times New Roman", serif;
+}
+
+.font-code {
+  font-family: "Monocode", "Courier New", monospace;
 }
 
 summary {
