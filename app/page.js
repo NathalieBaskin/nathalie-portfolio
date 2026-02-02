@@ -74,7 +74,7 @@ export default function Home() {
             sizes="(min-width:1536px) 2000px, (min-width:1280px) 1800px, (min-width:1024px) 1600px, (min-width:768px) 1000px, 100vw"
           />
 
-          {/* Left */}
+     
           <div className="hidden md:flex absolute inset-y-0 left-0 items-center pointer-events-none">
             <h1
               className="
