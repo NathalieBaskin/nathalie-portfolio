@@ -167,9 +167,6 @@ export default function Home() {
                   <h3 className="mt-4 text-xl font-bold text-white">
                     {p.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/70">
-                    {p.caption}
-                  </p>
                 </Link>
               </li>
             ))}

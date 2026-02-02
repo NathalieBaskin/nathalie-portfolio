@@ -11,6 +11,7 @@ export default function PhotoPage() {
     {
       id: "photo-wedding",
       slug: "brollop-och-forlovning",
+      cover: "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg",
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
@@ -24,12 +25,14 @@ export default function PhotoPage() {
     {
       id: "photo-family",
       slug: "familj",
+      cover: "/fotografi/familj/cover.familj.jpg",
       title: t("photo.categories.family"),
       caption: t("photo.categoryCaptions.family"),
     },
     {
       id: "photo-model",
       slug: "modell",
+      cover: "/fotografi/modell/cover.modell.jpg",
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },
@@ -74,9 +77,6 @@ export default function PhotoPage() {
                 <h3 className="text-xl font-bold text-white">
                   {category.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-white/70">
-                  {category.caption}
-                </p>
               </Link>
             ))}
           </div>
