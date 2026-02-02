@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "./components/LanguageProvider";
 
 export default function Home() {
@@ -16,21 +17,29 @@ export default function Home() {
   const latestPhotoProjects = [
     {
       key: "wedding",
+      slug: "brollop-och-forlovning",
+      cover: "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg",
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
     {
       key: "children",
+      slug: "barn",
+      cover: "/fotografi/barn/cover.barn.jpg",
       title: t("photo.categories.children"),
       caption: t("photo.categoryCaptions.children"),
     },
     {
-      key: "event",
-      title: t("photo.categories.event"),
-      caption: t("photo.categoryCaptions.event"),
+      key: "family",
+      slug: "familj",
+      cover: "/fotografi/familj/cover.familj.jpg",
+      title: t("photo.categories.family"),
+      caption: t("photo.categoryCaptions.family"),
     },
     {
       key: "model",
+      slug: "modell",
+      cover: "/fotografi/modell/cover.modell.jpg",
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },
@@ -39,7 +48,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HERO */}
-      <section className="relative mt-[14px] pt-[56px] pb-8 px-0 overflow-x-hidden">
+      <section className="relative mt-[14px] pt-[56px] pb-0 px-0 overflow-x-hidden">
         <div
           className="
             relative ml-auto
@@ -94,58 +103,78 @@ export default function Home() {
       </section>
 
       {/* Latest projects */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8 text-center md:text-left">
+      <section className="bg-black text-white">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="text-3xl font-bold mb-8 text-center md:text-left">
           {t("home.latestProjects")}
-        </h2>
+          </h2>
 
-        <p className="text-xl font-bold mb-4 text-center md:text-left font-code">
-          {t("home.development")}
-        </p>
+          <p className="text-xl font-bold mb-4 text-center md:text-left font-code text-white">
+            {t("home.development")}
+          </p>
 
-        <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {latestDevProjects.map((p) => (
-            <li key={p.src} className="space-y-4">
-              <div className="aspect-video w-full overflow-hidden rounded-lg bg-slate-100">
-                <video
-                  className="h-full w-full"
-                  autoPlay
-                  muted
-                  loop
-                  controls
-                  preload="metadata"
-                  playsInline
+          <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {latestDevProjects.map((p) => (
+              <li key={p.src} className="space-y-4">
+                <div className="aspect-video w-full overflow-hidden rounded-lg bg-white/5 border border-white/10">
+                  <video
+                    className="h-full w-full"
+                    autoPlay
+                    muted
+                    loop
+                    controls
+                    preload="metadata"
+                    playsInline
+                  >
+                    <source src={p.src} type="video/mp4" />
+                    {t("common.videoFallback")}
+                  </video>
+                </div>
+
+                <h3 className="mt-4 text-xl font-bold text-white">{p.title}</h3>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-12 text-xl font-bold mb-4 text-center md:text-left font-photo text-white">
+            {t("home.photography")}
+          </p>
+
+          <ul className="grid gap-8 md:grid-cols-2">
+            {latestPhotoProjects.map((p) => (
+              <li key={p.key}>
+                <Link
+                  href={`/photo/${p.slug}`}
+                  className="group block space-y-4"
+                  aria-label={p.title}
                 >
-                  <source src={p.src} type="video/mp4" />
-                  {t("common.videoFallback")}
-                </video>
-              </div>
+                  <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    {p.cover ? (
+                      <Image
+                        src={p.cover}
+                        alt={p.title}
+                        fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        className="object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <span className="text-xs uppercase tracking-[0.2em] text-white/50">
+                        {t("home.photoLabel")}
+                      </span>
+                    )}
+                  </div>
 
-              <h3 className="mt-4 text-xl font-bold text-black">{p.title}</h3>
-            </li>
-          ))}
-        </ul>
-
-        <p className="mt-12 text-xl font-bold mb-4 text-center md:text-left font-photo">
-          {t("home.photography")}
-        </p>
-
-        <ul className="grid gap-8 md:grid-cols-2">
-          {latestPhotoProjects.map((p) => (
-            <li key={p.key} className="space-y-4">
-              <div className="aspect-video w-full overflow-hidden rounded-lg bg-slate-100 flex items-center justify-center">
-                <span className="text-xs uppercase tracking-[0.2em] text-slate-400">
-                  {t("home.photoLabel")}
-                </span>
-              </div>
-
-              <h3 className="mt-4 text-xl font-bold text-black">{p.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {p.caption}
-              </p>
-            </li>
-          ))}
-        </ul>
+                  <h3 className="mt-4 text-xl font-bold text-white">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/70">
+                    {p.caption}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </main>
   );

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "../components/LanguageProvider";
 
 export default function PhotoPage() {
@@ -8,21 +10,26 @@ export default function PhotoPage() {
   const categories = [
     {
       id: "photo-wedding",
+      slug: "brollop-och-forlovning",
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
     {
       id: "photo-children",
+      slug: "barn",
+      cover: "/fotografi/barn/cover.barn.jpg",
       title: t("photo.categories.children"),
       caption: t("photo.categoryCaptions.children"),
     },
     {
-      id: "photo-event",
-      title: t("photo.categories.event"),
-      caption: t("photo.categoryCaptions.event"),
+      id: "photo-family",
+      slug: "familj",
+      title: t("photo.categories.family"),
+      caption: t("photo.categoryCaptions.family"),
     },
     {
       id: "photo-model",
+      slug: "modell",
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },
@@ -42,15 +49,27 @@ export default function PhotoPage() {
 
           <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {categories.map((category) => (
-              <article
+              <Link
                 key={category.id}
                 id={category.id}
-                className="space-y-3 scroll-mt-36"
+                href={`/photo/${category.slug}`}
+                className="group block space-y-3 scroll-mt-36"
+                aria-label={category.title}
               >
-                <div className="aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-white/5 flex items-center justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50">
-                    {t("home.photoLabel")}
-                  </span>
+                <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-white/5 flex items-center justify-center">
+                  {category.cover ? (
+                    <Image
+                      src={category.cover}
+                      alt={category.title}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className="text-xs uppercase tracking-[0.2em] text-white/50">
+                      {t("home.photoLabel")}
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-white">
                   {category.title}
@@ -58,7 +77,7 @@ export default function PhotoPage() {
                 <p className="text-sm leading-relaxed text-white/70">
                   {category.caption}
                 </p>
-              </article>
+              </Link>
             ))}
           </div>
         </section>

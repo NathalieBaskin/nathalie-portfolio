@@ -161,8 +161,8 @@ export default function Navbar() {
       setQuery("");
       return;
     }
-    if (includesAny(normalizedQuery, ["event", "events"])) {
-      goTo("/photo", "photo-event");
+    if (includesAny(normalizedQuery, ["family", "familj"])) {
+      goTo("/photo", "photo-family");
       setQuery("");
       return;
     }
