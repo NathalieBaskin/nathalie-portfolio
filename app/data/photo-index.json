@@ -1,0 +1,580 @@
+{
+  "barn": {
+    "categoryCover": "/fotografi/barn/cover.barn.jpg",
+    "albums": [
+      {
+        "id": "Filipson",
+        "title": "Filipson",
+        "cover": "/fotografi/barn/Filipson/1.cover.jpg",
+        "images": [
+          "/fotografi/barn/Filipson/1.cover.jpg",
+          "/fotografi/barn/Filipson/2.jpg"
+        ]
+      },
+      {
+        "id": "Kanila",
+        "title": "Kanila",
+        "cover": "/fotografi/barn/Kanila/1.cover.jpg",
+        "images": [
+          "/fotografi/barn/Kanila/1.cover.jpg",
+          "/fotografi/barn/Kanila/2.jpg",
+          "/fotografi/barn/Kanila/3.jpg"
+        ]
+      },
+      {
+        "id": "Nils",
+        "title": "Nils",
+        "cover": "/fotografi/barn/Nils/1.cover.jpg",
+        "images": [
+          "/fotografi/barn/Nils/1.cover.jpg",
+          "/fotografi/barn/Nils/2.jpg",
+          "/fotografi/barn/Nils/3.jpg",
+          "/fotografi/barn/Nils/4.jpg"
+        ]
+      },
+      {
+        "id": "Selda",
+        "title": "Selda",
+        "cover": "/fotografi/barn/Selda/4.cover.jpg",
+        "images": [
+          "/fotografi/barn/Selda/1.jpg",
+          "/fotografi/barn/Selda/2.jpg",
+          "/fotografi/barn/Selda/3.jpg",
+          "/fotografi/barn/Selda/4.cover.jpg"
+        ]
+      },
+      {
+        "id": "Vilda",
+        "title": "Vilda",
+        "cover": "/fotografi/barn/Vilda/3.cover.JPG",
+        "images": [
+          "/fotografi/barn/Vilda/1.jpg",
+          "/fotografi/barn/Vilda/2.jpg",
+          "/fotografi/barn/Vilda/3.cover.JPG",
+          "/fotografi/barn/Vilda/4.JPG"
+        ]
+      },
+      {
+        "id": "Yolina",
+        "title": "Yolina",
+        "cover": "/fotografi/barn/Yolina/6.cover.jpg",
+        "images": [
+          "/fotografi/barn/Yolina/1.jpg",
+          "/fotografi/barn/Yolina/2.jpg",
+          "/fotografi/barn/Yolina/3.jpg",
+          "/fotografi/barn/Yolina/4.jpg",
+          "/fotografi/barn/Yolina/5.jpg",
+          "/fotografi/barn/Yolina/6.cover.jpg"
+        ]
+      }
+    ]
+  },
+  "brollop-och-forlovning": {
+    "categoryCover": "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg",
+    "albums": [
+      {
+        "id": "Emma och Oscar",
+        "title": "Emma och Oscar",
+        "cover": "/fotografi/brollop-och-forlovning/Emma och Oscar/10.cover.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/1.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/2.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/3.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/4.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/6.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/7.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/8.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/9.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/10.cover.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/11.jpg",
+          "/fotografi/brollop-och-forlovning/Emma och Oscar/12.jpg"
+        ]
+      },
+      {
+        "id": "Erik och Martina",
+        "title": "Erik och Martina",
+        "cover": "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-35.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-35.jpg",
+          "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-36.jpg",
+          "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-37.jpg",
+          "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-38.jpg",
+          "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-39.jpg",
+          "/fotografi/brollop-och-forlovning/Erik och Martina/Untitled-40.jpg",
+          "/fotografi/brollop-och-forlovning/Erik och Martina/img_1216-1.jpg"
+        ]
+      },
+      {
+        "id": "Hanna och Andreas",
+        "title": "Hanna och Andreas",
+        "cover": "/fotografi/brollop-och-forlovning/Hanna och Andreas/2.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Hanna och Andreas/2.jpg",
+          "/fotografi/brollop-och-forlovning/Hanna och Andreas/17.jpg",
+          "/fotografi/brollop-och-forlovning/Hanna och Andreas/31 3.jpg",
+          "/fotografi/brollop-och-forlovning/Hanna och Andreas/31.jpg"
+        ]
+      },
+      {
+        "id": "Ida och Niklas",
+        "title": "Ida och Niklas",
+        "cover": "/fotografi/brollop-och-forlovning/Ida och Niklas/15.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Ida och Niklas/15.jpg",
+          "/fotografi/brollop-och-forlovning/Ida och Niklas/21.jpg",
+          "/fotografi/brollop-och-forlovning/Ida och Niklas/IMG_1618.JPG",
+          "/fotografi/brollop-och-forlovning/Ida och Niklas/IMG_1628.JPEG"
+        ]
+      },
+      {
+        "id": "Jesper och Nicole",
+        "title": "Jesper och Nicole",
+        "cover": "/fotografi/brollop-och-forlovning/Jesper och Nicole/8.cover.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/1.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/2.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/3.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/4.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/5.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/6.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/7.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/8.cover.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/10.svartvit 2.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/11.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/12.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/14.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/14.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/19 4.jpg",
+          "/fotografi/brollop-och-forlovning/Jesper och Nicole/19.svartvit.jpg"
+        ]
+      },
+      {
+        "id": "Johan och Madeleine",
+        "title": "Johan och Madeleine",
+        "cover": "/fotografi/brollop-och-forlovning/Johan och Madeleine/10.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Johan och Madeleine/10.jpg",
+          "/fotografi/brollop-och-forlovning/Johan och Madeleine/30svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Johan och Madeleine/52.jpg",
+          "/fotografi/brollop-och-forlovning/Johan och Madeleine/110.jpg"
+        ]
+      },
+      {
+        "id": "Lena och Andreas",
+        "title": "Lena och Andreas",
+        "cover": "/fotografi/brollop-och-forlovning/Lena och Andreas/P-21.jpeg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-21.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-21.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-22.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-22.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-23.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-23.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-24.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-24.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-25.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-25.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-26.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-26.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-27.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-28.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-28.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/P-29-1.jpeg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-29.jpg",
+          "/fotografi/brollop-och-forlovning/Lena och Andreas/Untitled-30.jpg"
+        ]
+      },
+      {
+        "id": "Luisa och Muslim",
+        "title": "Luisa och Muslim",
+        "cover": "/fotografi/brollop-och-forlovning/Luisa och Muslim/1.cover.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/1.cover.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/2 (2).jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/2 3.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/2.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/3.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/3.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/4.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/4.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/5.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/6.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/7.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/8.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/9.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/10.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/10.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/12.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/13.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/13.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/16.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/17.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/19.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/23.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/27.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/32.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/34.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/36 2.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/36.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/43.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/44.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/45.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/49.svartvit.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/55.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/57.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/66.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/MINDRE.jpg",
+          "/fotografi/brollop-och-forlovning/Luisa och Muslim/s.jpg"
+        ]
+      },
+      {
+        "id": "Sebastian och Jhoselin",
+        "title": "Sebastian och Jhoselin",
+        "cover": "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/2.cover.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/1.jpg",
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/2.cover.jpg",
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/3.jpg",
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/4.jpg",
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/5.jpg",
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/6.jpg",
+          "/fotografi/brollop-och-forlovning/Sebastian och Jhoselin/7.jpg"
+        ]
+      },
+      {
+        "id": "Serena och Oliver",
+        "title": "Serena och Oliver",
+        "cover": "/fotografi/brollop-och-forlovning/Serena och Oliver/5.cover.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/1.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/2.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/3.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/4.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/5.cover.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/17 2.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/19 2.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/19 3.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/25.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/31 2.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/32 2.jpg",
+          "/fotografi/brollop-och-forlovning/Serena och Oliver/35.jpg"
+        ]
+      },
+      {
+        "id": "Therese och Milan",
+        "title": "Therese och Milan",
+        "cover": "/fotografi/brollop-och-forlovning/Therese och Milan/6.cover.jpg",
+        "images": [
+          "/fotografi/brollop-och-forlovning/Therese och Milan/1.jpg",
+          "/fotografi/brollop-och-forlovning/Therese och Milan/2.jpg",
+          "/fotografi/brollop-och-forlovning/Therese och Milan/3.jpg",
+          "/fotografi/brollop-och-forlovning/Therese och Milan/4.jpg",
+          "/fotografi/brollop-och-forlovning/Therese och Milan/5.jpg",
+          "/fotografi/brollop-och-forlovning/Therese och Milan/6.cover.jpg"
+        ]
+      }
+    ]
+  },
+  "familj": {
+    "categoryCover": "/fotografi/familj/cover.familj.jpg",
+    "albums": [
+      {
+        "id": "Arash och Elham",
+        "title": "Arash och Elham",
+        "cover": "/fotografi/familj/Arash och Elham/Untitled-5.jpg",
+        "images": [
+          "/fotografi/familj/Arash och Elham/Untitled-5.jpg",
+          "/fotografi/familj/Arash och Elham/Untitled-6.jpg",
+          "/fotografi/familj/Arash och Elham/Untitled-7.jpg",
+          "/fotografi/familj/Arash och Elham/Untitled-8.jpg",
+          "/fotografi/familj/Arash och Elham/Untitled-9.jpg"
+        ]
+      },
+      {
+        "id": "Emma och Oscar",
+        "title": "Emma och Oscar",
+        "cover": "/fotografi/familj/Emma och Oscar/1.jpg",
+        "images": [
+          "/fotografi/familj/Emma och Oscar/1.jpg",
+          "/fotografi/familj/Emma och Oscar/2.jpg",
+          "/fotografi/familj/Emma och Oscar/3.jpg",
+          "/fotografi/familj/Emma och Oscar/4.jpg",
+          "/fotografi/familj/Emma och Oscar/5 2.jpg",
+          "/fotografi/familj/Emma och Oscar/5.jpg",
+          "/fotografi/familj/Emma och Oscar/6.jpg",
+          "/fotografi/familj/Emma och Oscar/7.jpg",
+          "/fotografi/familj/Emma och Oscar/9.1.jpg",
+          "/fotografi/familj/Emma och Oscar/9.jpg",
+          "/fotografi/familj/Emma och Oscar/10.1.jpg",
+          "/fotografi/familj/Emma och Oscar/10.jpg",
+          "/fotografi/familj/Emma och Oscar/11.jpg",
+          "/fotografi/familj/Emma och Oscar/13.jpg",
+          "/fotografi/familj/Emma och Oscar/14.jpg",
+          "/fotografi/familj/Emma och Oscar/15.jpg",
+          "/fotografi/familj/Emma och Oscar/16.jpg",
+          "/fotografi/familj/Emma och Oscar/18.jpg",
+          "/fotografi/familj/Emma och Oscar/19.jpg",
+          "/fotografi/familj/Emma och Oscar/20.jpg",
+          "/fotografi/familj/Emma och Oscar/21.jpg",
+          "/fotografi/familj/Emma och Oscar/22.jpg",
+          "/fotografi/familj/Emma och Oscar/23.1.jpg",
+          "/fotografi/familj/Emma och Oscar/23.jpg",
+          "/fotografi/familj/Emma och Oscar/24.jpg",
+          "/fotografi/familj/Emma och Oscar/25.1.jpg",
+          "/fotografi/familj/Emma och Oscar/25.jpg",
+          "/fotografi/familj/Emma och Oscar/26.1.jpg",
+          "/fotografi/familj/Emma och Oscar/26.jpg",
+          "/fotografi/familj/Emma och Oscar/27.jpg",
+          "/fotografi/familj/Emma och Oscar/28.jpg",
+          "/fotografi/familj/Emma och Oscar/29.jpg",
+          "/fotografi/familj/Emma och Oscar/30.jpg",
+          "/fotografi/familj/Emma och Oscar/31.jpg",
+          "/fotografi/familj/Emma och Oscar/32.jpg",
+          "/fotografi/familj/Emma och Oscar/33.jpg",
+          "/fotografi/familj/Emma och Oscar/34.jpg",
+          "/fotografi/familj/Emma och Oscar/35.1.jpg",
+          "/fotografi/familj/Emma och Oscar/35.jpg",
+          "/fotografi/familj/Emma och Oscar/36.1.jpg",
+          "/fotografi/familj/Emma och Oscar/36.jpg",
+          "/fotografi/familj/Emma och Oscar/37.1.jpg",
+          "/fotografi/familj/Emma och Oscar/37.jpg",
+          "/fotografi/familj/Emma och Oscar/38.1.jpg",
+          "/fotografi/familj/Emma och Oscar/38.jpg",
+          "/fotografi/familj/Emma och Oscar/39.jpg",
+          "/fotografi/familj/Emma och Oscar/40.jpg",
+          "/fotografi/familj/Emma och Oscar/41.jpg",
+          "/fotografi/familj/Emma och Oscar/42.jpg",
+          "/fotografi/familj/Emma och Oscar/44.jpg",
+          "/fotografi/familj/Emma och Oscar/45.1.jpg",
+          "/fotografi/familj/Emma och Oscar/45.jpg",
+          "/fotografi/familj/Emma och Oscar/46.jpg",
+          "/fotografi/familj/Emma och Oscar/47.jpg",
+          "/fotografi/familj/Emma och Oscar/48.jpg",
+          "/fotografi/familj/Emma och Oscar/49.jpg",
+          "/fotografi/familj/Emma och Oscar/50.jpg",
+          "/fotografi/familj/Emma och Oscar/51.jpg",
+          "/fotografi/familj/Emma och Oscar/52.jpg",
+          "/fotografi/familj/Emma och Oscar/53.jpg",
+          "/fotografi/familj/Emma och Oscar/54.jpg",
+          "/fotografi/familj/Emma och Oscar/55.jpg",
+          "/fotografi/familj/Emma och Oscar/56.jpg",
+          "/fotografi/familj/Emma och Oscar/59.jpg",
+          "/fotografi/familj/Emma och Oscar/60.jpg",
+          "/fotografi/familj/Emma och Oscar/61.jpg",
+          "/fotografi/familj/Emma och Oscar/63.1.jpg",
+          "/fotografi/familj/Emma och Oscar/63.jpg",
+          "/fotografi/familj/Emma och Oscar/65.jpg",
+          "/fotografi/familj/Emma och Oscar/66.jpg",
+          "/fotografi/familj/Emma och Oscar/67.jpg",
+          "/fotografi/familj/Emma och Oscar/68.jpg",
+          "/fotografi/familj/Emma och Oscar/69.jpg",
+          "/fotografi/familj/Emma och Oscar/70.jpg",
+          "/fotografi/familj/Emma och Oscar/71.jpg",
+          "/fotografi/familj/Emma och Oscar/72.jpg",
+          "/fotografi/familj/Emma och Oscar/73.jpg",
+          "/fotografi/familj/Emma och Oscar/74.jpg",
+          "/fotografi/familj/Emma och Oscar/75.jpg",
+          "/fotografi/familj/Emma och Oscar/76.jpg",
+          "/fotografi/familj/Emma och Oscar/77.jpg",
+          "/fotografi/familj/Emma och Oscar/79.jpg",
+          "/fotografi/familj/Emma och Oscar/80.jpg",
+          "/fotografi/familj/Emma och Oscar/81.jpg",
+          "/fotografi/familj/Emma och Oscar/82.jpg",
+          "/fotografi/familj/Emma och Oscar/83.jpg",
+          "/fotografi/familj/Emma och Oscar/84.jpg",
+          "/fotografi/familj/Emma och Oscar/85.jpg",
+          "/fotografi/familj/Emma och Oscar/87.jpg",
+          "/fotografi/familj/Emma och Oscar/88.jpg",
+          "/fotografi/familj/Emma och Oscar/90.jpg",
+          "/fotografi/familj/Emma och Oscar/91.jpg",
+          "/fotografi/familj/Emma och Oscar/92.jpg",
+          "/fotografi/familj/Emma och Oscar/93.jpg",
+          "/fotografi/familj/Emma och Oscar/94.jpg",
+          "/fotografi/familj/Emma och Oscar/96.jpg",
+          "/fotografi/familj/Emma och Oscar/97.jpg",
+          "/fotografi/familj/Emma och Oscar/99.jpg"
+        ]
+      },
+      {
+        "id": "Emma och Per",
+        "title": "Emma och Per",
+        "cover": "/fotografi/familj/Emma och Per/6.1.jpg",
+        "images": [
+          "/fotografi/familj/Emma och Per/6.1.jpg",
+          "/fotografi/familj/Emma och Per/7..jpg",
+          "/fotografi/familj/Emma och Per/8.jpg",
+          "/fotografi/familj/Emma och Per/17.jpg"
+        ]
+      },
+      {
+        "id": "Filipsson",
+        "title": "Filipsson",
+        "cover": "/fotografi/familj/Filipsson/Familj-5.jpg",
+        "images": [
+          "/fotografi/familj/Filipsson/Familj-5.jpg",
+          "/fotografi/familj/Filipsson/Familj-11.jpg",
+          "/fotografi/familj/Filipsson/Familj-16.jpg"
+        ]
+      },
+      {
+        "id": "Ida och Niklas",
+        "title": "Ida och Niklas",
+        "cover": "/fotografi/familj/Ida och Niklas/11.jpg",
+        "images": [
+          "/fotografi/familj/Ida och Niklas/11.jpg",
+          "/fotografi/familj/Ida och Niklas/19.jpg",
+          "/fotografi/familj/Ida och Niklas/IMG_7600.JPG",
+          "/fotografi/familj/Ida och Niklas/1805511-8592331-5jdu3vpo1k.jpeg",
+          "/fotografi/familj/Ida och Niklas/gm.jpg"
+        ]
+      },
+      {
+        "id": "Isabelle och Joakim",
+        "title": "Isabelle och Joakim",
+        "cover": "/fotografi/familj/Isabelle och Joakim/Bella-6.jpg",
+        "images": [
+          "/fotografi/familj/Isabelle och Joakim/Bella-6.jpg",
+          "/fotografi/familj/Isabelle och Joakim/Bella-15.jpg",
+          "/fotografi/familj/Isabelle och Joakim/Bella-19.jpg",
+          "/fotografi/familj/Isabelle och Joakim/Bella-21.jpg",
+          "/fotografi/familj/Isabelle och Joakim/Bella-22.jpg"
+        ]
+      },
+      {
+        "id": "Jesper och Nicole",
+        "title": "Jesper och Nicole",
+        "cover": "/fotografi/familj/Jesper och Nicole/1.jpg",
+        "images": [
+          "/fotografi/familj/Jesper och Nicole/1.jpg",
+          "/fotografi/familj/Jesper och Nicole/3.jpg",
+          "/fotografi/familj/Jesper och Nicole/4.jpg"
+        ]
+      },
+      {
+        "id": "Meili och Niclas",
+        "title": "Meili och Niclas",
+        "cover": "/fotografi/familj/Meili och Niclas/Untitled-41.jpg",
+        "images": [
+          "/fotografi/familj/Meili och Niclas/Untitled-41.jpg",
+          "/fotografi/familj/Meili och Niclas/Untitled-42.jpg",
+          "/fotografi/familj/Meili och Niclas/Untitled-43.jpg",
+          "/fotografi/familj/Meili och Niclas/Untitled-44.jpg",
+          "/fotografi/familj/Meili och Niclas/Untitled-45.jpg",
+          "/fotografi/familj/Meili och Niclas/Untitled-46.jpg",
+          "/fotografi/familj/Meili och Niclas/Untitled-47.jpg"
+        ]
+      },
+      {
+        "id": "Möller",
+        "title": "Möller",
+        "cover": "/fotografi/familj/Möller/Untitled-50.jpg",
+        "images": [
+          "/fotografi/familj/Möller/Untitled-50.jpg",
+          "/fotografi/familj/Möller/Untitled-51.jpg"
+        ]
+      }
+    ]
+  },
+  "modell": {
+    "categoryCover": "/fotografi/modell/cover.modell.jpg",
+    "albums": [
+      {
+        "id": "Cassie",
+        "title": "Cassie",
+        "cover": "/fotografi/modell/Cassie/ca1.jpg",
+        "images": [
+          "/fotografi/modell/Cassie/ca1.jpg",
+          "/fotografi/modell/Cassie/Cassie 1,1.png",
+          "/fotografi/modell/Cassie/cass-14.jpg",
+          "/fotografi/modell/Cassie/cassie-19.jpg",
+          "/fotografi/modell/Cassie/cass-33.jpg",
+          "/fotografi/modell/Cassie/a.jpg"
+        ]
+      },
+      {
+        "id": "Cassie och Sofia",
+        "title": "Cassie och Sofia",
+        "cover": "/fotografi/modell/Cassie och Sofia/1.kf.jpg",
+        "images": [
+          "/fotografi/modell/Cassie och Sofia/1.kf.jpg",
+          "/fotografi/modell/Cassie och Sofia/2.klar2.jpg",
+          "/fotografi/modell/Cassie och Sofia/Untitled-2.jpg",
+          "/fotografi/modell/Cassie och Sofia/Untitled-3.jpg",
+          "/fotografi/modell/Cassie och Sofia/sofia.jpg"
+        ]
+      },
+      {
+        "id": "Ida",
+        "title": "Ida",
+        "cover": "/fotografi/modell/Ida/1805641-8593631-qq2j8nvmuu.jpeg",
+        "images": [
+          "/fotografi/modell/Ida/1805641-8593631-qq2j8nvmuu.jpeg",
+          "/fotografi/modell/Ida/1901611-9104771-vm61d91bx2.jpeg",
+          "/fotografi/modell/Ida/1901621-9104871-plsisxgxnr.jpeg",
+          "/fotografi/modell/Ida/1901631-9104971-3lbr94m5xs.jpeg"
+        ]
+      },
+      {
+        "id": "Isabelle",
+        "title": "Isabelle",
+        "cover": "/fotografi/modell/Isabelle/Bella-4.jpg",
+        "images": [
+          "/fotografi/modell/Isabelle/Bella-4.jpg",
+          "/fotografi/modell/Isabelle/Bella-5.jpg",
+          "/fotografi/modell/Isabelle/Bella-7.jpg",
+          "/fotografi/modell/Isabelle/Bella-9.jpg",
+          "/fotografi/modell/Isabelle/Bella-11.jpg",
+          "/fotografi/modell/Isabelle/Bella-25.jpg",
+          "/fotografi/modell/Isabelle/Bella-28.jpg",
+          "/fotografi/modell/Isabelle/Untitled-60.jpg",
+          "/fotografi/modell/Isabelle/Bella-2333.jpg"
+        ]
+      },
+      {
+        "id": "Karolina",
+        "title": "Karolina",
+        "cover": "/fotografi/modell/Karolina/9.jpg",
+        "images": [
+          "/fotografi/modell/Karolina/9.jpg",
+          "/fotografi/modell/Karolina/Untitled-19.jpg"
+        ]
+      },
+      {
+        "id": "Katja",
+        "title": "Katja",
+        "cover": "/fotografi/modell/Katja/19.jpg",
+        "images": [
+          "/fotografi/modell/Katja/19.jpg",
+          "/fotografi/modell/Katja/IMG_6276.jpg",
+          "/fotografi/modell/Katja/d.jpg",
+          "/fotografi/modell/Katja/dfg.jpg",
+          "/fotografi/modell/Katja/sd.jpg"
+        ]
+      },
+      {
+        "id": "Röst",
+        "title": "Röst",
+        "cover": "/fotografi/modell/Röst/1.jpg",
+        "images": [
+          "/fotografi/modell/Röst/1.jpg",
+          "/fotografi/modell/Röst/3.jpg",
+          "/fotografi/modell/Röst/4.jpg"
+        ]
+      },
+      {
+        "id": "Silva Padel",
+        "title": "Silva Padel",
+        "cover": "/fotografi/modell/Silva Padel/Silvia.-3.jpg",
+        "images": [
+          "/fotografi/modell/Silva Padel/Silvia.-3.jpg",
+          "/fotografi/modell/Silva Padel/Silvia.-4.jpg",
+          "/fotografi/modell/Silva Padel/Silvia.-5.jpg",
+          "/fotografi/modell/Silva Padel/Silvia.-8.jpg",
+          "/fotografi/modell/Silva Padel/Silvia.-9jpg.jpg",
+          "/fotografi/modell/Silva Padel/Silvia.-12.png",
+          "/fotografi/modell/Silva Padel/Silva.-18.png"
+        ]
+      }
+    ]
+  }
+}
