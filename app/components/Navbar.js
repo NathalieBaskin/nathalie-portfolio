@@ -200,6 +200,8 @@ export default function Navbar() {
   };
 
   const toggleLanguage = () => setLang(lang === "en" ? "sv" : "en");
+  const swedishLabel = lang === "en" ? "SWE" : "SVE";
+  const englishLabel = "ENG";
 
   return (
     <nav className="fixed inset-x-0 top-0 bg-black text-white shadow-md z-50">
@@ -216,12 +218,12 @@ export default function Navbar() {
               aria-label={t("nav.homeAria")}
               className="flex flex-col items-center gap-1 hover:opacity-90 transition"
             >
-                <Image
-                  src="/favicon.png"
+              <Image
+                src="/favicon.png"
                 alt=""
                 width={26}
                 height={26}
-                className="h-6 w-6 object-contain hover:opacity-90 transition"
+                className="h-8 w-8 object-contain hover:opacity-90 transition"
                 priority
               />
             </Link>
@@ -232,10 +234,14 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-2 py-1 hover:border-white/40 transition"
             >
               <FlagBadge active={lang === "sv"}>
-                <SwedenFlag />
+                <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
+                  {swedishLabel}
+                </span>
               </FlagBadge>
               <FlagBadge active={lang === "en"}>
-                <GreatBritainFlag />
+                <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
+                  {englishLabel}
+                </span>
               </FlagBadge>
             </button>
           </div>
@@ -260,12 +266,12 @@ export default function Navbar() {
           >
               <Image
                 src="/favicon.png"
-              alt=""
-              width={28}
-              height={28}
-              className="h-6 w-6 md:h-7 md:w-7 object-contain hover:opacity-90 transition"
-              priority
-            />
+                alt=""
+                width={28}
+                height={28}
+                className="h-8 w-8 md:h-9 md:w-9 object-contain hover:opacity-90 transition"
+                priority
+              />
           </Link>
 
           <div className="flex w-1/2 items-center gap-3 pl-3 sm:gap-4 sm:pl-6">
@@ -280,10 +286,14 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-2 py-1 hover:border-white/40 transition"
             >
               <FlagBadge active={lang === "sv"}>
-                <SwedenFlag />
+                <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
+                  {swedishLabel}
+                </span>
               </FlagBadge>
               <FlagBadge active={lang === "en"}>
-                <GreatBritainFlag />
+                <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
+                  {englishLabel}
+                </span>
               </FlagBadge>
             </button>
 
@@ -396,43 +406,6 @@ function FlagBadge({ active, children }) {
   );
 }
 
-function SwedenFlag() {
-  return (
-    <svg
-      viewBox="0 0 16 10"
-      aria-hidden="true"
-      className="h-3 w-5"
-    >
-      <rect width="16" height="10" fill="#006AA7" />
-      <rect y="4" width="16" height="2" fill="#FECC00" />
-      <rect x="5" width="2" height="10" fill="#FECC00" />
-    </svg>
-  );
-}
-
-function GreatBritainFlag() {
-  return (
-    <svg
-      viewBox="0 0 16 10"
-      aria-hidden="true"
-      className="h-3 w-5"
-    >
-      <rect width="16" height="10" fill="#012169" />
-      <path
-        d="M0 0l6 4.1V0h4v4.1L16 0v2.1l-4.7 3.1H16v3.6h-4.7L16 11V13L10 8.9V13H6V8.9L0 13v-2l4.7-2.2H0V5.2h4.7L0 2.1z"
-        fill="#FFFFFF"
-      />
-      <path
-        d="M0 0l6 4.1V0h2v5L0 0zm16 0l-6 4.1V0h-2v5l8-5zM0 10l6-4.1V10h2V5L0 10zm16 0l-6-4.1V10h-2V5l8 5z"
-        fill="#C8102E"
-      />
-      <rect y="4" width="16" height="2" fill="#FFFFFF" />
-      <rect x="7" width="2" height="10" fill="#FFFFFF" />
-      <rect y="4.4" width="16" height="1.2" fill="#C8102E" />
-      <rect x="7.4" width="1.2" height="10" fill="#C8102E" />
-    </svg>
-  );
-}
 
 function MailIcon() {
   return (
