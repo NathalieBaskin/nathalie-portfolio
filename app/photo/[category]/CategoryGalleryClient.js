@@ -54,7 +54,7 @@ export default function CategoryGalleryClient({
   const categoryCoverUrl = categoryCover ? r2(categoryCover) : categoryCover;
 
   const openAlbum = (index) => {
-    if (!albums[index]?.images?.length) return;
+    if (!normalizedAlbums[index]?.images?.length) return;
     setActiveAlbumIndex(index);
     setActiveImageIndex(0);
   };
@@ -143,7 +143,7 @@ export default function CategoryGalleryClient({
 
         <section className="space-y-6">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {albums.map((album, index) => (
+            {normalizedAlbums.map((album, index) => (
               <button
                 key={album.id}
                 type="button"
@@ -176,7 +176,7 @@ export default function CategoryGalleryClient({
             ))}
           </div>
 
-          {albums.length === 0 ? (
+          {normalizedAlbums.length === 0 ? (
             <p className="text-sm text-white/60">{t("photo.emptyCategory")}</p>
           ) : null}
         </section>
