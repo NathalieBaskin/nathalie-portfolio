@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import CategoryGalleryClient from "./CategoryGalleryClient";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 const IMAGE_EXTENSIONS = new Set([
   ".jpg",
   ".jpeg",
@@ -40,6 +43,18 @@ function sortByNumber(names) {
     if (aNum === null && bNum !== null) return 1;
     return a.localeCompare(b, "sv", { numeric: true, sensitivity: "base" });
   });
+}
+
+export function generateStaticParams() {
+  const baseDir = path.join(process.cwd(), "public", "fotografi");
+  if (!fs.existsSync(baseDir)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(baseDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => ({ category: entry.name }));
 }
 
 function getCategoryData(category) {
