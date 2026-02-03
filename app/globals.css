@@ -113,18 +113,22 @@ summary::-webkit-details-marker {
 
 .hero-split {
   width: 100%;
-  height: clamp(300px, 40vw, 560px);
+  height: calc(var(--hero-height) + 10px);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  --hero-height: clamp(260px, 34vw, 520px);
+  --hero-height: clamp(320px, 60vw, 670px);
+  --hero-left-trim: 24%;
+  --hero-left-shift: 56%;
+  --hero-right-shift: 20%;
 }
 
 .hero-img {
-  height: var(--hero-height);
-  width: auto;
+  height: var(--hero-height) !important;
+  width: auto !important;
   display: block;
   max-width: none;
+  object-fit: contain;
 }
 
 .hero-right .hero-img {
@@ -132,13 +136,13 @@ summary::-webkit-details-marker {
 }
 
 .hero-img-left {
-  clip-path: inset(0 var(--hero-left-trim, 180px) 0 0);
-    transform: translateX(550px);
+  clip-path: inset(0 var(--hero-left-trim) 0 0);
+  transform: translateX(var(--hero-left-shift));
 }
 
 .hero-img-right {
-  clip-path: inset(0 0 0 var(--hero-right-trim, 0px));
-    transform: translateX(-160px);
+  clip-path: inset(0 0 0 0);
+  transform: translateX(calc(var(--hero-right-shift) * -1));
 }
 
 .hero-left,
@@ -184,14 +188,19 @@ summary::-webkit-details-marker {
   }
 }
 
-/* Keep current sizes on large screens; scale both proportionally on smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   .hero-split {
-    --hero-height: clamp(220px, 46vw, 420px);
+    --hero-height: clamp(220px, 90vw, 300px);
+    --hero-left-trim: 28%;
+    --hero-left-shift: 60%;
+    --hero-right-shift: 16%;
   }
-
-  .hero-right .hero-img,
-  .hero-img {
-    height: var(--hero-height);
+}
+@media (max-width: 550px) {
+  .hero-split {
+    --hero-height: clamp(220px, 100vw, 190px);
+    --hero-left-trim: 28%;
+    --hero-left-shift: 60%;
+    --hero-right-shift: 16%;
   }
 }
