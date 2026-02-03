@@ -3,8 +3,11 @@ import Navbar from "./components/Navbar";
 import { LanguageProvider } from "./components/LanguageProvider";
 
 export const metadata = {
-  title: "Nathalie Baskin - Photographer & Developer",
+  title: "Nathalie Baskin",
   description: "Portfolio by Nathalie Baskin: projects, photography, and contact.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
