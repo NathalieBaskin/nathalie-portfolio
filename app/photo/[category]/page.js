@@ -4,6 +4,7 @@ import CategoryGalleryClient from "./CategoryGalleryClient";
 
 export const dynamic = "force-static";
 export const revalidate = false;
+export const dynamicParams = false;
 
 const IMAGE_EXTENSIONS = new Set([
   ".jpg",
@@ -118,8 +119,8 @@ function getCategoryData(category) {
   return { categoryCover, albums };
 }
 
-export default async function PhotoCategoryPage({ params }) {
-  const { category: categoryParam } = await params;
+export default function PhotoCategoryPage({ params }) {
+  const { category: categoryParam } = params || {};
   const category = decodeURIComponent(categoryParam || "");
   const { categoryCover, albums } = getCategoryData(category);
 
