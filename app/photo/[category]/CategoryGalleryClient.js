@@ -21,6 +21,123 @@ function getCategoryLabel(category, t) {
   return labels[category] || category;
 }
 
+const PRICE_ALIASES = {
+  wedding: "brollop-och-forlovning",
+  children: "barn",
+  family: "familj",
+  model: "modell",
+};
+
+const PRICE_DATA = {
+  "brollop-och-forlovning": {
+    title: "Bröllop och förlovning",
+    blocks: [
+      {
+        title: "Lilla paketet",
+        subtitle: "Vigsel & porträtt",
+        price: "5 000 kr",
+        duration: "Upp till 2 timmar",
+        includesTitle: "Vad ingår?",
+        includes: [
+          "Upp till 50st redigerade bilder",
+          "Levererade via WeTransfer",
+          "Lösenordsskyddat onlinegalleri att dela med nära och kära",
+        ],
+      },
+      {
+        title: "Mellan paketet",
+        subtitle: "Förberedelser, vigsel, porträtt, gästfotografering",
+        price: "12 000 kr",
+        duration: "Upp till 5 timmar",
+        includesTitle: "Vad ingår?",
+        includes: [
+          "Upp till 100st redigerade bilder",
+          "Levererade via WeTransfer",
+          "Lösenordsskyddat onlinegalleri att dela med nära och kära",
+        ],
+      },
+      {
+        title: "Stora paketet",
+        subtitle:
+          "Förberedelser, vigsel, porträtt, gästfotografering, mingel, middag & fest",
+        price: "18 000 kr",
+        duration: "Upp till 10 timmar",
+        includesTitle: "Vad ingår?",
+        includes: [
+          "Lösenordsskyddat onlinegalleri att dela med nära och kära",
+          "Kortare video",
+          "Upp till 500st redigerade bilder levererade via WeTransfer & USB",
+          "10st utskrivna bilder (10x13) och 1st inramad förstoring (40x60)",
+        ],
+      },
+    ],
+  },
+  familj: {
+    title: "Familj",
+    blocks: [
+      {
+        title: "Small",
+        price: "2 000 kr",
+        duration: "2 timmar",
+        description:
+          "Passar för familj på 2-4 personer/gravidfoto med 1-2 fotoplatser i näravstånd.",
+      },
+      {
+        title: "Medium",
+        price: "3 500 kr",
+        duration: "4 timmar",
+        description:
+          "Passar för familj på 4-6 med 2-4 fotoplatser i näravstånd.",
+      },
+    ],
+  },
+  barn: {
+    title: "Barn",
+    blocks: [
+      {
+        title: "Ett barn",
+        lines: ["2 timmar - 1 500 kr"],
+      },
+      {
+        title: "Två barn",
+        lines: ["2 timmar - 2 500 kr", "4 timmar - 4 000 kr"],
+      },
+      {
+        title: "Tre barn",
+        lines: ["2 timmar - 4 000 kr", "4 timmar - 5 500 kr"],
+      },
+      {
+        title: "Fyra barn",
+        lines: ["2 timmar - 6 000 kr", "4 timmar - 7 500 kr"],
+      },
+    ],
+    footnote: "Fler än 4 barn - tillägg 1 500 kr per barn.",
+  },
+  modell: {
+    title: "Modell",
+    blocks: [
+      {
+        title: "En person",
+        lines: ["2 timmar - 2 000 kr", "4 timmar - 3 500 kr"],
+      },
+      {
+        title: "Två personer",
+        lines: ["2 timmar - 3 000 kr", "4 timmar - 4 500 kr"],
+      },
+      {
+        title: "Tre personer",
+        lines: ["2 timmar - 4 500 kr", "4 timmar - 6 000 kr"],
+      },
+    ],
+    footnote: "Fler än 3 personer - 1 000 kr tillägg per person.",
+  },
+};
+
+function getPriceData(category) {
+  const key = PRICE_ALIASES[category] || category;
+  return PRICE_DATA[key] || null;
+}
+
 export default function CategoryGalleryClient({
   category,
   categoryCover,
@@ -34,6 +151,7 @@ export default function CategoryGalleryClient({
     () => getCategoryLabel(category, t),
     [category, t]
   );
+  const priceData = useMemo(() => getPriceData(category), [category]);
 
   const normalizedAlbums = useMemo(
     () =>
@@ -149,7 +267,7 @@ export default function CategoryGalleryClient({
                 key={album.id}
                 type="button"
                 onClick={() => openAlbum(index)}
-                className="group text-left"
+                className="group text-left cursor-pointer"
                 aria-label={t("photo.openAlbumAria", { title: album.title })}
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-white/5">
@@ -181,6 +299,81 @@ export default function CategoryGalleryClient({
           {normalizedAlbums.length === 0 ? (
             <p className="text-sm text-white/60">{t("photo.emptyCategory")}</p>
           ) : null}
+
+          {priceData ? (
+            <div className="mt-12 border-t border-white/10 pt-10">
+              <h2 className="text-2xl font-bold mb-2">
+                {t("photo.pricesTitle")}
+              </h2>
+              <p className="text-white/60">{priceData.title}</p>
+
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
+                {priceData.blocks.map((block) => (
+                  <div
+                    key={block.title}
+                    className="rounded-xl border border-white/10 bg-white/5 p-6"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">
+                          {block.title}
+                        </h3>
+                        {block.subtitle ? (
+                          <p className="mt-1 text-sm text-white/70">
+                            {block.subtitle}
+                          </p>
+                        ) : null}
+                      </div>
+                      {block.price ? (
+                        <span className="text-sm font-semibold text-white">
+                          {block.price}
+                        </span>
+                      ) : null}
+                    </div>
+
+                    {block.duration ? (
+                      <p className="mt-2 text-sm text-white/70">
+                        {block.duration}
+                      </p>
+                    ) : null}
+
+                    {block.description ? (
+                      <p className="mt-3 text-sm text-white/70">
+                        {block.description}
+                      </p>
+                    ) : null}
+
+                    {block.lines?.length ? (
+                      <ul className="mt-3 space-y-1 text-sm text-white/70">
+                        {block.lines.map((line) => (
+                          <li key={line}>{line}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+
+                    {block.includes?.length ? (
+                      <div className="mt-4">
+                        <p className="text-xs uppercase tracking-[0.2em] text-white/60">
+                          {block.includesTitle || "Vad ingår?"}
+                        </p>
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-white/70">
+                          {block.includes.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+
+              {priceData.footnote ? (
+                <p className="mt-4 text-xs text-white/50">
+                  {priceData.footnote}
+                </p>
+              ) : null}
+            </div>
+          ) : null}
         </section>
       </div>
 
@@ -197,7 +390,7 @@ export default function CategoryGalleryClient({
               type="button"
               onClick={closeAlbum}
               aria-label={t("photo.closeModalAria")}
-              className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60"
+              className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
               <CloseIcon />
             </button>
@@ -206,7 +399,7 @@ export default function CategoryGalleryClient({
               type="button"
               onClick={goPrev}
               aria-label={t("photo.previousImageAria")}
-              className="absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60"
+              className="absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
               <ArrowLeftIcon />
             </button>
@@ -215,7 +408,7 @@ export default function CategoryGalleryClient({
               type="button"
               onClick={goNext}
               aria-label={t("photo.nextImageAria")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60"
+              className="absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
               <ArrowRightIcon />
             </button>
