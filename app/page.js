@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HERO */}
-      <section className="relative mt-[14px] pt-[56px] pb-0 px-0 overflow-x-hidden">
+      <section className="relative mt-[8px] pt-[16px] pb-0 px-0 overflow-x-hidden">
         <div
           className="
             relative ml-auto
@@ -59,45 +59,27 @@ export default function Home() {
             2xl:max-w-[2000px]
           "
         >
-          <Image
-            src="/hero.png"
-            alt={t("home.heroAlt")}
-            width={2000}
-            height={1000}
-            priority
-            className="
-              w-full
-              h-[25vh]
-              sm:h-auto
-              object-cover
-            "
-            sizes="(min-width:1536px) 2000px, (min-width:1280px) 1800px, (min-width:1024px) 1600px, (min-width:768px) 1000px, 100vw"
-          />
-
-     
-          <div className="hidden md:flex absolute inset-y-0 left-0 items-center pointer-events-none">
-            <h1
-              className="
-                font-extrabold text-black leading-none font-photo
-                text-[clamp(26px,3.2vw,72px)]
-                ml-16 lg:ml-28
-              "
-            >
-              {t("home.photographer")}
-            </h1>
-          </div>
-
-          {/* Right */}
-          <div className="hidden md:flex absolute inset-y-0 right-0 items-center pointer-events-none">
-            <h1
-              className="
-                font-extrabold text-black leading-none font-code
-                text-[clamp(26px,3.2vw,72px)]
-                mr-16 lg:mr-28
-              "
-            >
-              {t("home.coder")}
-            </h1>
+          <div className="hero-split">
+            <div className="hero-left">
+              <Image
+                src="/hero.left.png"
+                alt="Hero left"
+                width={900}
+                height={900}
+                priority
+                className="hero-img"
+              />
+            </div>
+            <div className="hero-right">
+              <Image
+                src="/hero.right.png"
+                alt="Hero right"
+                width={900}
+                height={900}
+                priority
+                className="hero-img"
+              />
+            </div>
           </div>
         </div>
       </section>

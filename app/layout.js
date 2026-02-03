@@ -12,7 +12,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-36 sm:scroll-pt-24">
+    <html
+      lang="en"
+      className="scroll-smooth scroll-pt-36 sm:scroll-pt-24"
+      data-scroll-behavior="smooth"
+    >
       <body className="bg-white text-slate-900 antialiased overflow-x-hidden">
         <LanguageProvider>
           <Navbar />

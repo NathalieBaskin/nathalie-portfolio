@@ -9,8 +9,8 @@ export function generateStaticParams() {
   return Object.keys(photoIndex).map((category) => ({ category }));
 }
 
-export default function PhotoCategoryPage({ params }) {
-  const { category: categoryParam } = params || {};
+export default async function PhotoCategoryPage({ params }) {
+  const { category: categoryParam } = (await params) || {};
   const category = decodeURIComponent(categoryParam || "");
   const entry = photoIndex[category] || { categoryCover: null, albums: [] };
 
