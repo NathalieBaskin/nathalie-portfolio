@@ -126,6 +126,7 @@ export default function CategoryGalleryClient({
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="object-cover opacity-75"
                 priority
+                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center text-center">
@@ -159,6 +160,7 @@ export default function CategoryGalleryClient({
                       fill
                       sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition duration-500 group-hover:scale-105"
+                      unoptimized
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.3em] text-white/50">
@@ -233,6 +235,7 @@ export default function CategoryGalleryClient({
                   fill
                   sizes="100vw"
                   className="object-contain"
+                  unoptimized
                 />
               </div>
             </div>
