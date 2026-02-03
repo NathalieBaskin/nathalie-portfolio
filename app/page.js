@@ -3,43 +3,46 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "./components/LanguageProvider";
+import { r2 } from "./lib/media";
 
 export default function Home() {
   const { t } = useLanguage();
 
   const latestDevProjects = [
-    { src: "/videos/backend-ett.mp4", title: "RIFTHUB" },
-    { src: "/videos/javascript-2.mp4", title: "NABASKI" },
-    { src: "/videos/javascript-3.mp4", title: "Derma Nordic Med Spa" },
-    { src: "/videos/javascript-1.mp4", title: "Freaky Fashion" },
+    { src: r2("/videos/backend-ett.mp4"), title: "RIFTHUB" },
+    { src: r2("/videos/javascript-2.mp4"), title: "NABASKI" },
+    { src: r2("/videos/javascript-3.mp4"), title: "Derma Nordic Med Spa" },
+    { src: r2("/videos/javascript-1.mp4"), title: "Freaky Fashion" },
   ];
 
   const latestPhotoProjects = [
     {
       key: "wedding",
       slug: "brollop-och-forlovning",
-      cover: "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg",
+      cover: r2(
+        "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg"
+      ),
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
     {
       key: "children",
       slug: "barn",
-      cover: "/fotografi/barn/cover.barn.jpg",
+      cover: r2("/fotografi/barn/cover.barn.jpg"),
       title: t("photo.categories.children"),
       caption: t("photo.categoryCaptions.children"),
     },
     {
       key: "family",
       slug: "familj",
-      cover: "/fotografi/familj/cover.familj.jpg",
+      cover: r2("/fotografi/familj/cover.familj.jpg"),
       title: t("photo.categories.family"),
       caption: t("photo.categoryCaptions.family"),
     },
     {
       key: "model",
       slug: "modell",
-      cover: "/fotografi/modell/cover.modell.jpg",
+      cover: r2("/fotografi/modell/cover.modell.jpg"),
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },
@@ -62,14 +65,14 @@ export default function Home() {
           <div className="hero-split">
             <div className="hero-left">
               <img
-                src="/hero.left.png"
+                src={r2("/hero.left.png")}
                 alt="Hero left"
                 className="hero-img hero-img-left"
               />
             </div>
             <div className="hero-right">
               <img
-                src="/hero.right.png"
+                src={r2("/hero.right.png")}
                 alt="Hero right"
                 className="hero-img hero-img-right"
               />

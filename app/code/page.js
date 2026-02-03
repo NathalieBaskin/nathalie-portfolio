@@ -1,33 +1,34 @@
 "use client";
 
 import { useLanguage } from "../components/LanguageProvider";
+import { r2 } from "../lib/media";
 
 export default function CodePage() {
   const { t } = useLanguage();
 
   const projects = [
     {
-      src: "/videos/javascript-1.mp4",
+      src: r2("/videos/javascript-1.mp4"),
       title: "Freaky Fashion",
       caption: t("projects.freaky"),
     },
     {
-      src: "/videos/agila.mp4",
+      src: r2("/videos/agila.mp4"),
       title: "BLITZ",
       caption: t("projects.blitz"),
     },
     {
-      src: "/videos/javascript-2.mp4",
+      src: r2("/videos/javascript-2.mp4"),
       title: "NABASKI",
       caption: t("projects.nabaski"),
     },
     {
-      src: "/videos/javascript-3.mp4",
+      src: r2("/videos/javascript-3.mp4"),
       title: "Derma Nordic Med Spa",
       caption: t("projects.derma"),
     },
     {
-      src: "/videos/backend-ett.mp4",
+      src: r2("/videos/backend-ett.mp4"),
       title: "RIFTHUB",
       caption: t("projects.rifthub"),
     },

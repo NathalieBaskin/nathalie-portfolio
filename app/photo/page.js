@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../components/LanguageProvider";
+import { r2 } from "../lib/media";
 
 export default function PhotoPage() {
   const { t } = useLanguage();
@@ -11,28 +12,30 @@ export default function PhotoPage() {
     {
       id: "photo-wedding",
       slug: "brollop-och-forlovning",
-      cover: "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg",
+      cover: r2(
+        "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg"
+      ),
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
     {
       id: "photo-children",
       slug: "barn",
-      cover: "/fotografi/barn/cover.barn.jpg",
+      cover: r2("/fotografi/barn/cover.barn.jpg"),
       title: t("photo.categories.children"),
       caption: t("photo.categoryCaptions.children"),
     },
     {
       id: "photo-family",
       slug: "familj",
-      cover: "/fotografi/familj/cover.familj.jpg",
+      cover: r2("/fotografi/familj/cover.familj.jpg"),
       title: t("photo.categories.family"),
       caption: t("photo.categoryCaptions.family"),
     },
     {
       id: "photo-model",
       slug: "modell",
-      cover: "/fotografi/modell/cover.modell.jpg",
+      cover: r2("/fotografi/modell/cover.modell.jpg"),
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },

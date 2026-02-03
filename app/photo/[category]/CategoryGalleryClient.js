@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../../components/LanguageProvider";
+import { r2 } from "../../lib/media";
 
 function getCategoryLabel(category, t) {
   const labels = {
@@ -34,11 +35,23 @@ export default function CategoryGalleryClient({
     [category, t]
   );
 
+  const normalizedAlbums = useMemo(
+    () =>
+      albums.map((album) => ({
+        ...album,
+        cover: album.cover ? r2(album.cover) : album.cover,
+        images: (album.images || []).map((image) => r2(image)),
+      })),
+    [albums]
+  );
+
   const activeAlbum =
-    activeAlbumIndex !== null ? albums[activeAlbumIndex] : null;
+    activeAlbumIndex !== null ? normalizedAlbums[activeAlbumIndex] : null;
   const images = activeAlbum?.images ?? [];
   const totalImages = images.length;
   const currentImage = totalImages ? images[activeImageIndex] : null;
+
+  const categoryCoverUrl = categoryCover ? r2(categoryCover) : categoryCover;
 
   const openAlbum = (index) => {
     if (!albums[index]?.images?.length) return;
@@ -104,10 +117,10 @@ export default function CategoryGalleryClient({
           <p className="text-xs uppercase tracking-[0.3em] text-white/50">
             {t("photo.pageTitle")}
           </p>
-          {categoryCover ? (
+          {categoryCoverUrl ? (
             <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-white/10">
               <Image
-                src={categoryCover}
+                src={categoryCoverUrl}
                 alt={categoryLabel}
                 fill
                 sizes="(min-width: 1024px) 60vw, 100vw"

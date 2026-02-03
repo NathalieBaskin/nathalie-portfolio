@@ -58,3 +58,9 @@ next-env.d.ts
 !public/**/*.jpeg
 !public/**/*.gif
 !public/**/*.svg
+
+# R2-hosted media (keep local copies untracked)
+/public/fotografi/
+/public/videos/
+/public/hero.left.png
+/public/hero.right.png
