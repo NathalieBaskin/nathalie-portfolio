@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HERO */}
-      <section className="relative mt-[8px] pt-[16px] pb-0 px-0 overflow-x-hidden">
+      <section className="relative mt-0 pt-0 pb-0 px-0 overflow-x-hidden">
         <div
           className="
             relative ml-auto
@@ -61,23 +61,17 @@ export default function Home() {
         >
           <div className="hero-split">
             <div className="hero-left">
-              <Image
+              <img
                 src="/hero.left.png"
                 alt="Hero left"
-                width={900}
-                height={900}
-                priority
-                className="hero-img"
+                className="hero-img hero-img-left"
               />
             </div>
             <div className="hero-right">
-              <Image
+              <img
                 src="/hero.right.png"
                 alt="Hero right"
-                width={900}
-                height={900}
-                priority
-                className="hero-img"
+                className="hero-img hero-img-right"
               />
             </div>
           </div>

@@ -216,8 +216,8 @@ export default function Navbar() {
               aria-label={t("nav.homeAria")}
               className="flex flex-col items-center gap-1 hover:opacity-90 transition"
             >
-              <Image
-                src="/middle-icon.png"
+                <Image
+                  src="/favicon.png"
                 alt=""
                 width={26}
                 height={26}
@@ -258,8 +258,8 @@ export default function Navbar() {
             aria-label={t("nav.homeAria")}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex flex-col items-center gap-1 pointer-events-auto hover:opacity-90 transition"
           >
-            <Image
-              src="/middle-icon.png"
+              <Image
+                src="/favicon.png"
               alt=""
               width={28}
               height={28}
