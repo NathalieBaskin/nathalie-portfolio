@@ -11,7 +11,7 @@ const translations = {
       photoMenuAria: "Open photography menu",
       codeMenuAria: "Open development menu",
       languageAria: "Switch language",
-      searchPlaceholder: "Search (wedding, prices, Instagram...)",
+      searchPlaceholder: "Search (wedding, prices, contact...)",
       searchButton: "Search",
     },
     social: {
@@ -89,7 +89,7 @@ const translations = {
       photoMenuAria: "Öppna fotomeny",
       codeMenuAria: "Öppna kodmeny",
       languageAria: "Byt språk",
-      searchPlaceholder: "Sök (bröllop, priser, Instagram...)",
+      searchPlaceholder: "Sök (bröllop, priser, kontakt...)",
       searchButton: "Sök",
     },
     social: {
@@ -102,7 +102,7 @@ const translations = {
     home: {
       photographer: "fotograf",
       coder: "<kodare>",
-      latestProjects: "Senaste projekt",
+      latestProjects: "",
       development: "Utveckling",
       photography: "Fotografi",
       photoLabel: "Foto",
@@ -114,7 +114,7 @@ const translations = {
     photo: {
       pageTitle: "Fotografi",
       portfolioTitle: "Portfolio",
-      portfolioIntro: "Utvalda kategorier och arbeten.",
+      portfolioIntro: "",
       pricesTitle: "Priser",
       pricesIntro: "Paket och timpriser.",
       categories: {
