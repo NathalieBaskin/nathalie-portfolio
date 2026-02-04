@@ -89,6 +89,18 @@ export default function PhotoPage() {
           <h2 className="text-2xl font-bold mb-2">{t("photo.pricesTitle")}</h2>
           <p className="text-white/70">{t("photo.pricesIntro")}</p>
           <p className="mt-4 text-white/70">{t("photo.pricesNote")}</p>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {categories.map((category) => (
+              <Link
+                key={`price-${category.id}`}
+                href={`/photo/${category.slug}#category-prices`}
+                className="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/80 transition hover:border-white/50 hover:text-white"
+              >
+                {category.title}
+              </Link>
+            ))}
+          </div>
         </section>
       </div>
     </main>

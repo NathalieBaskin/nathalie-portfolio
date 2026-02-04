@@ -171,7 +171,16 @@ export default function Navbar() {
       setQuery("");
       return;
     }
-    if (includesAny(normalizedQuery, ["price", "prices", "pris", "priser"])) {
+    if (
+      includesAny(normalizedQuery, [
+        "price",
+        "prices",
+        "pris",
+        "priser",
+        "kostnad",
+        "kostnader",
+      ])
+    ) {
       goTo("/photo", "photo-prices");
       setQuery("");
       return;
@@ -218,13 +227,12 @@ export default function Navbar() {
               aria-label={t("nav.homeAria")}
               className="flex flex-col items-center gap-1 hover:opacity-90 transition"
             >
-              <Image
+              <img
                 src="/favicon.png"
                 alt=""
-                width={26}
-                height={26}
+                width={32}
+                height={32}
                 className="h-8 w-8 object-contain hover:opacity-90 transition"
-                priority
               />
             </Link>
             <button
@@ -264,13 +272,12 @@ export default function Navbar() {
             aria-label={t("nav.homeAria")}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex flex-col items-center gap-1 pointer-events-auto hover:opacity-90 transition"
           >
-              <Image
+              <img
                 src="/favicon.png"
                 alt=""
-                width={28}
-                height={28}
+                width={36}
+                height={36}
                 className="h-8 w-8 md:h-9 md:w-9 object-contain hover:opacity-90 transition"
-                priority
               />
           </Link>
 

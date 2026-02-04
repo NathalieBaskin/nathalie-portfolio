@@ -220,6 +220,24 @@ export default function CategoryGalleryClient({
     return () => window.removeEventListener("keydown", handleKey);
   }, [activeAlbumIndex, totalImages]);
 
+  useEffect(() => {
+    if (!currentImage || !totalImages) return;
+    if (typeof window === "undefined") return;
+
+    const preload = (src) => {
+      if (!src) return;
+      const img = new window.Image();
+      img.src = src;
+    };
+
+    const nextImage = images[(activeImageIndex + 1) % totalImages];
+    const prevImage =
+      images[(activeImageIndex - 1 + totalImages) % totalImages];
+
+    preload(nextImage);
+    preload(prevImage);
+  }, [currentImage, activeImageIndex, totalImages, images]);
+
   return (
     <main className="min-h-screen bg-black text-white">
       <div className="max-w-6xl mx-auto px-6 py-10 space-y-10">
@@ -301,7 +319,10 @@ export default function CategoryGalleryClient({
           ) : null}
 
           {priceData ? (
-            <div className="mt-12 border-t border-white/10 pt-10">
+            <div
+              id="category-prices"
+              className="mt-12 border-t border-white/10 pt-10 scroll-mt-36"
+            >
               <h2 className="text-2xl font-bold mb-2">
                 {t("photo.pricesTitle")}
               </h2>
@@ -429,6 +450,7 @@ export default function CategoryGalleryClient({
                   sizes="100vw"
                   className="object-contain"
                   unoptimized
+                  priority
                 />
               </div>
             </div>
