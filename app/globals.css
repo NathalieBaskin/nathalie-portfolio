@@ -113,7 +113,7 @@ summary::-webkit-details-marker {
 
 .hero-split {
   width: 100%;
-  height: calc(var(--hero-height) + 10px);
+  height: calc(var(--hero-height) - 160px);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
