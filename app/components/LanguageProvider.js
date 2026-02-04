@@ -66,7 +66,7 @@ const translations = {
     code: {
       pageTitle: "Development",
       portfolioTitle: "Portfolio",
-      portfolioIntro: "Selected development projects.",
+      portfolioIntro: "",
     },
     projects: {
       rifthub:
@@ -144,7 +144,7 @@ const translations = {
     code: {
       pageTitle: "Utveckling",
       portfolioTitle: "Portfolio",
-      portfolioIntro: "Utvalda utvecklingsprojekt.",
+      portfolioIntro: "",
     },
     projects: {
       rifthub:
