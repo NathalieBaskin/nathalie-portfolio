@@ -55,7 +55,7 @@ export default function Home() {
       <section className="relative mt-0 pt-0 pb-0 px-0 overflow-x-hidden">
         <div
           className="
-            relative ml-auto
+            hero-frame relative ml-auto
             w-screen max-w-none
             md:w-full md:max-w-[1000px]
             lg:max-w-[1600px]
