@@ -235,23 +235,6 @@ export default function Navbar() {
                 className="h-8 w-8 object-contain hover:opacity-90 transition"
               />
             </Link>
-            <button
-              type="button"
-              onClick={toggleLanguage}
-              aria-label={t("nav.languageAria")}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-2 py-1 hover:border-white/40 transition"
-            >
-              <FlagBadge active={lang === "sv"}>
-                <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
-                  {swedishLabel}
-                </span>
-              </FlagBadge>
-              <FlagBadge active={lang === "en"}>
-                <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
-                  {englishLabel}
-                </span>
-              </FlagBadge>
-            </button>
           </div>
 
           <div className="flex items-center justify-end">
@@ -311,40 +294,63 @@ export default function Navbar() {
         <div className="border-t border-white/10 py-2">
           <div className="grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
             <div className="hidden sm:block" />
-            <div className="flex items-center justify-center gap-4">
-              <SocialIcon
-                href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                  t("social.mailSubject")
-                )}`}
-                label={t("social.mail")}
-                highlight={highlights.mail}
-              >
-                <MailIcon />
-              </SocialIcon>
-              <SocialIcon
-                href={INSTAGRAM_URL}
-                label={t("social.instagram")}
-                highlight={highlights.instagram}
-                external
-              >
-                <InstagramIcon />
-              </SocialIcon>
-              <SocialIcon
-                href={GITHUB_URL}
-                label={t("social.github")}
-                highlight={highlights.github}
-                external
-              >
-                <GitHubIcon />
-              </SocialIcon>
-              <SocialIcon
-                href={LINKEDIN_URL}
-                label={t("social.linkedin")}
-                highlight={highlights.linkedin}
-                external
-              >
-                <LinkedInIcon />
-              </SocialIcon>
+            <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center sm:flex sm:w-auto sm:justify-center sm:gap-4">
+              <div className="sm:hidden" />
+              <div className="flex items-center justify-center gap-4">
+                <SocialIcon
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(
+                    t("social.mailSubject")
+                  )}`}
+                  label={t("social.mail")}
+                  highlight={highlights.mail}
+                >
+                  <MailIcon />
+                </SocialIcon>
+                <SocialIcon
+                  href={INSTAGRAM_URL}
+                  label={t("social.instagram")}
+                  highlight={highlights.instagram}
+                  external
+                >
+                  <InstagramIcon />
+                </SocialIcon>
+                <SocialIcon
+                  href={GITHUB_URL}
+                  label={t("social.github")}
+                  highlight={highlights.github}
+                  external
+                >
+                  <GitHubIcon />
+                </SocialIcon>
+                <SocialIcon
+                  href={LINKEDIN_URL}
+                  label={t("social.linkedin")}
+                  highlight={highlights.linkedin}
+                  external
+                >
+                  <LinkedInIcon />
+                </SocialIcon>
+              </div>
+
+              <div className="flex justify-end sm:hidden">
+                <button
+                  type="button"
+                  onClick={toggleLanguage}
+                  aria-label={t("nav.languageAria")}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-2 py-1 hover:border-white/40 transition"
+                >
+                  <FlagBadge active={lang === "sv"}>
+                    <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
+                      {swedishLabel}
+                    </span>
+                  </FlagBadge>
+                  <FlagBadge active={lang === "en"}>
+                    <span className="px-1 text-[10px] font-semibold tracking-[0.2em]">
+                      {englishLabel}
+                    </span>
+                  </FlagBadge>
+                </button>
+              </div>
             </div>
 
             <form

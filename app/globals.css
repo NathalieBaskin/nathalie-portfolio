@@ -117,10 +117,10 @@ summary::-webkit-details-marker {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  --hero-height: clamp(320px, 60vw, 670px);
+  --hero-height: clamp(220px, 44vw, 500px);
   --hero-left-trim: 24%;
   --hero-left-shift: 56%;
-  --hero-right-shift: 20%;
+  --hero-right-shift: 6%;
 }
 
 .hero-img {
@@ -190,17 +190,17 @@ summary::-webkit-details-marker {
 
 @media (max-width: 600px) {
   .hero-split {
-    --hero-height: clamp(220px, 90vw, 300px);
+    --hero-height: clamp(180px, 60vw, 240px);
     --hero-left-trim: 28%;
     --hero-left-shift: 60%;
-    --hero-right-shift: 16%;
+    --hero-right-shift: 6%;
   }
 }
 @media (max-width: 550px) {
   .hero-split {
-    --hero-height: clamp(220px, 100vw, 190px);
+    --hero-height: clamp(170px, 70vw, 220px);
     --hero-left-trim: 28%;
     --hero-left-shift: 60%;
-    --hero-right-shift: 16%;
+    --hero-right-shift: 6%;
   }
 }

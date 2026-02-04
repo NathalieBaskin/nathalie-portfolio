@@ -411,7 +411,7 @@ export default function CategoryGalleryClient({
               type="button"
               onClick={closeAlbum}
               aria-label={t("photo.closeModalAria")}
-              className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
+              className="absolute right-5 top-5 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
               <CloseIcon />
             </button>
@@ -420,7 +420,7 @@ export default function CategoryGalleryClient({
               type="button"
               onClick={goPrev}
               aria-label={t("photo.previousImageAria")}
-              className="absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
+              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
               <ArrowLeftIcon />
             </button>
@@ -429,13 +429,13 @@ export default function CategoryGalleryClient({
               type="button"
               onClick={goNext}
               aria-label={t("photo.nextImageAria")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
+              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
               <ArrowRightIcon />
             </button>
 
             <div className="mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-6 py-10">
-              <div className="mb-4 flex w-full items-center justify-between text-xs uppercase tracking-[0.3em] text-white/60">
+              <div className="mb-4 flex w-full items-center justify-between text-xs uppercase tracking-[0.3em] text-white/60 z-20">
                 <span>{activeAlbum.title}</span>
                 <span>
                   {activeImageIndex + 1}/{totalImages}
