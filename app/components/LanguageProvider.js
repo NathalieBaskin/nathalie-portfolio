@@ -24,7 +24,7 @@ const translations = {
     home: {
       photographer: "photographer",
       coder: "<coder>",
-      latestProjects: "Latest projects",
+      latestProjects: "",
       development: "Development",
       photography: "Photography",
       photoLabel: "Photo",
@@ -49,7 +49,7 @@ const translations = {
       categoryCaptions: {
         wedding: "",
         children: "",
-        family: "W",
+        family: "",
         event: "",
         model: "",
       },
@@ -125,11 +125,11 @@ const translations = {
         model: "Modell",
       },
       categoryCaptions: {
-        wedding: "Heldagsdokumentation med tidlös och naturlig känsla.",
-        children: "Lekfulla porträtt med mjukt ljus och äkta ögonblick.",
-        family: "Varma, berättande porträtt för familjer.",
-        event: "Från mindre sammankomster till större produktioner.",
-        model: "Rena, redaktionella bilder för portföljer och kampanjer.",
+        wedding: "",
+        children: "",
+        family: "",
+        event: "",
+        model: "",
       },
       albumCount: "{count} bilder",
       emptyCategory: "Inga album ännu.",
@@ -139,7 +139,7 @@ const translations = {
       previousImageAria: "Föregående bild",
       nextImageAria: "Nästa bild",
       pricesNote:
-        "Lägg in dina paket, timpriser och eventuella tillägg här.",
+        "",
     },
     code: {
       pageTitle: "Utveckling",
