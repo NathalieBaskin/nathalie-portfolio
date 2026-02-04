@@ -36,9 +36,9 @@ const translations = {
     photo: {
       pageTitle: "Photography",
       portfolioTitle: "Portfolio",
-      portfolioIntro: "Selected categories and work samples.",
+      portfolioIntro: "",
       pricesTitle: "Prices",
-      pricesIntro: "Packages and hourly rates.",
+      pricesIntro: "",
       categories: {
         wedding: "Weddings & Engagements",
         children: "Children",
@@ -47,11 +47,11 @@ const translations = {
         model: "Model",
       },
       categoryCaptions: {
-        wedding: "Full-day coverage with a timeless, natural feel.",
-        children: "Playful portraits with soft light and real moments.",
-        family: "Warm, story-driven portraits for families.",
-        event: "From small gatherings to larger productions.",
-        model: "Clean, editorial imagery for portfolios and campaigns.",
+        wedding: "",
+        children: "",
+        family: "W",
+        event: "",
+        model: "",
       },
       albumCount: "{count} photos",
       emptyCategory: "No albums yet.",
@@ -61,7 +61,7 @@ const translations = {
       previousImageAria: "Previous image",
       nextImageAria: "Next image",
       pricesNote:
-        "Add your packages, hourly rates, and any travel or add-on fees here.",
+        "",
     },
     code: {
       pageTitle: "Development",
