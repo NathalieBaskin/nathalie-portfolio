@@ -7,6 +7,7 @@ import { r2 } from "./lib/media";
 
 export default function Home() {
   const { t } = useLanguage();
+  const heroVersion = "v2";
 
   const latestDevProjects = [
     { src: r2("/videos/backend-ett.mp4"), title: "RIFTHUB" },
@@ -65,14 +66,14 @@ export default function Home() {
           <div className="hero-split">
             <div className="hero-left">
               <img
-                src={r2("/hero.left.png")}
+                src={r2(`/hero.left.png?${heroVersion}`)}
                 alt="Hero left"
                 className="hero-img hero-img-left"
               />
             </div>
             <div className="hero-right">
               <img
-                src={r2("/hero.right.png")}
+                src={r2(`/hero.right.png?${heroVersion}`)}
                 alt="Hero right"
                 className="hero-img hero-img-right"
               />
