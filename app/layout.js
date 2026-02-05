@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { LanguageProvider } from "./components/LanguageProvider";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata = {
   title: "Nathalie Baskin",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     >
       <body className="bg-white text-slate-900 antialiased overflow-x-hidden">
         <LanguageProvider>
+          <ScrollToTop />
           <Navbar />
           <div className="pt-36 sm:pt-24">{children}</div>
         </LanguageProvider>

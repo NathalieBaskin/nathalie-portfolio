@@ -29,6 +29,15 @@ const translations = {
       photography: "Photography",
       photoLabel: "Photo",
       heroAlt: "Nathalie photographer and coder",
+      welcomeTitle: "Welcome!",
+      aboutIntro:
+        "Here I bring together photography and code in one place. Two expressions that for me belong together.",
+      aboutP1:
+        "I have been photographing for almost 15 years and have always been drawn to details, mood, and the small things that make an image feel alive. It has shaped how I think visually, and it stays with me even when I work digitally.",
+      aboutP2:
+        "I am now close to finishing my developer studies and use the same sense of form when I build pages and interfaces. I like the practical, the simple, and making things come together in a way that feels natural.",
+      aboutContact:
+        "On this site you can browse both photo and code. Want to book a shoot or hire me as a developer (remote)? Feel free to reach out.",
     },
     common: {
       videoFallback: "Your browser can't play this video.",
@@ -107,6 +116,15 @@ const translations = {
       photography: "Fotografi",
       photoLabel: "Foto",
       heroAlt: "Nathalie fotograf och kodare",
+      welcomeTitle: "Välkommen!",
+      aboutIntro:
+        "Här samlar jag foto och kod på ett och samma ställe. Två uttryck som för mig hänger ihop.",
+      aboutP1:
+        "Jag har fotograferat i snart 15 år och alltid fastnat för detaljer, stämning och det där lilla som gör att en bild känns levande. Det har format hur jag tänker visuellt, och det följer med mig även när jag jobbar digitalt.",
+      aboutP2:
+        "Nu är jag snart färdigutbildad utvecklare och använder samma känsla för form när jag bygger sidor och gränssnitt. Jag gillar det praktiska, det enkla, och att få saker att hänga ihop på ett sätt som känns naturligt.",
+      aboutContact:
+        "På den här sidan kan du titta runt bland både foto och kod. Vill du boka fotografering eller anlita mig som utvecklare (remote)? Hör gärna av dig.",
     },
     common: {
       videoFallback: "Din webbläsare kan tyvärr inte spela upp videon.",
