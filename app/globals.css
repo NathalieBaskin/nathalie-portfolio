@@ -160,7 +160,7 @@ summary::-webkit-details-marker {
   margin-bottom: -0.3cqw;
   margin-right: -15.625cqw;
   margin-left: 3.125cqw;
-  z-index: 1;
+  z-index: 10;
 }
 
 .hero-right {
@@ -172,7 +172,7 @@ summary::-webkit-details-marker {
   margin-bottom: 0;
   margin-left: 0;
   margin-right: -10cqw;
-  z-index: 10;
+  z-index: 1;
 }
 
 @keyframes hero-left-in {

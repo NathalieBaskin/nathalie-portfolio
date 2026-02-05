@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             <div className="hero-right">
               <img
-                src={r2(`/hero.right.png?${heroVersion}`)}
+                src={r2(`/hero.right.jpg?${heroVersion}`)}
                 alt="Hero right"
                 className="hero-img hero-img-right"
                 loading="eager"
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-black text-white">
+      <section className="bg-stone-900 text-white">
         <div className="max-w-3xl mx-auto px-6 py-16">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-6">
             {t("home.welcomeTitle")}
