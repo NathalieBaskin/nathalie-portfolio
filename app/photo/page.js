@@ -12,9 +12,7 @@ export default function PhotoPage() {
     {
       id: "photo-wedding",
       slug: "brollop-och-forlovning",
-      cover: r2(
-        "/fotografi/brollop-och-forlovning/cover.brollop-och-forlovning.jpg"
-      ),
+      cover: r2("/fotografi/brollop-och-forlovning/Luisa och Muslim/13.jpg"),
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
@@ -28,14 +26,14 @@ export default function PhotoPage() {
     {
       id: "photo-family",
       slug: "familj",
-      cover: r2("/fotografi/familj/cover.familj.jpg"),
+      cover: r2("/fotografi/familj/Isabelle och Joakim/Bella-22.jpg"),
       title: t("photo.categories.family"),
       caption: t("photo.categoryCaptions.family"),
     },
     {
       id: "photo-model",
       slug: "modell",
-      cover: r2("/fotografi/modell/cover.modell.jpg"),
+      cover: r2("/fotografi/modell/Cassie och Sofia/sofia.jpg"),
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },
