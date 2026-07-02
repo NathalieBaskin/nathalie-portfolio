@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const sharp = require("sharp");
 
 const IMAGE_EXTENSIONS = new Set([
   ".jpg",
@@ -36,7 +37,12 @@ function sortByNumber(names) {
   });
 }
 
-function buildIndex() {
+async function describeImage(category, name, filePath) {
+  const { width, height } = await sharp(filePath).metadata();
+  return { src: `/fotografi/${category}/${name}`, width, height };
+}
+
+async function buildIndex() {
   const baseDir = path.join(process.cwd(), "public", "fotografi");
   if (!fs.existsSync(baseDir)) {
     return {};
@@ -63,19 +69,24 @@ function buildIndex() {
     );
     const orderedFiles = coverFile ? [coverFile, ...restSorted] : restSorted;
 
+    const images = [];
+    for (const name of orderedFiles) {
+      images.push(
+        await describeImage(category, name, path.join(categoryDir, name))
+      );
+    }
+
     index[category] = {
-      cover: coverFile ? `/fotografi/${category}/${coverFile}` : orderedFiles[0]
-        ? `/fotografi/${category}/${orderedFiles[0]}`
-        : null,
-      images: orderedFiles.map((name) => `/fotografi/${category}/${name}`),
+      cover: images[0] || null,
+      images,
     };
   }
 
   return index;
 }
 
-function main() {
-  const index = buildIndex();
+async function main() {
+  const index = await buildIndex();
   const outDir = path.join(process.cwd(), "app", "data");
   const outFile = path.join(outDir, "photo-index.json");
 

@@ -1,64 +1,248 @@
 {
   "barn": {
-    "cover": "/fotografi/barn/1cover.jpg",
+    "cover": {
+      "src": "/fotografi/barn/1cover.jpg",
+      "width": 2000,
+      "height": 1333
+    },
     "images": [
-      "/fotografi/barn/1cover.jpg",
-      "/fotografi/barn/2.jpg",
-      "/fotografi/barn/3.jpg",
-      "/fotografi/barn/4.jpg",
-      "/fotografi/barn/5.jpg"
+      {
+        "src": "/fotografi/barn/1cover.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/barn/2.jpg",
+        "width": 2000,
+        "height": 1345
+      },
+      {
+        "src": "/fotografi/barn/3.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/barn/4.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/barn/5.jpg",
+        "width": 1800,
+        "height": 1200
+      }
     ]
   },
   "brollop-och-forlovning": {
-    "cover": "/fotografi/brollop-och-forlovning/1cover.jpg",
+    "cover": {
+      "src": "/fotografi/brollop-och-forlovning/1cover.jpg",
+      "width": 2000,
+      "height": 1333
+    },
     "images": [
-      "/fotografi/brollop-och-forlovning/1cover.jpg",
-      "/fotografi/brollop-och-forlovning/2.jpg",
-      "/fotografi/brollop-och-forlovning/3.jpg",
-      "/fotografi/brollop-och-forlovning/4.jpg",
-      "/fotografi/brollop-och-forlovning/5.jpg",
-      "/fotografi/brollop-och-forlovning/6.jpg",
-      "/fotografi/brollop-och-forlovning/7.jpg",
-      "/fotografi/brollop-och-forlovning/8.jpg",
-      "/fotografi/brollop-och-forlovning/9.jpg",
-      "/fotografi/brollop-och-forlovning/10.jpg",
-      "/fotografi/brollop-och-forlovning/11.jpg",
-      "/fotografi/brollop-och-forlovning/12.jpg"
+      {
+        "src": "/fotografi/brollop-och-forlovning/1cover.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/2.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/3.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/4.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/5.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/6.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/7.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/8.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/9.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/10.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/11.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/12.jpg",
+        "width": 2000,
+        "height": 1333
+      }
     ]
   },
   "familj": {
-    "cover": "/fotografi/familj/1cover.jpg",
+    "cover": {
+      "src": "/fotografi/familj/1cover.jpg",
+      "width": 2000,
+      "height": 1333
+    },
     "images": [
-      "/fotografi/familj/1cover.jpg",
-      "/fotografi/familj/2.jpg",
-      "/fotografi/familj/3.jpg",
-      "/fotografi/familj/4.jpg",
-      "/fotografi/familj/5.jpg",
-      "/fotografi/familj/6.jpg",
-      "/fotografi/familj/7.jpg",
-      "/fotografi/familj/8.jpg",
-      "/fotografi/familj/9.jpg",
-      "/fotografi/familj/10.jpg"
+      {
+        "src": "/fotografi/familj/1cover.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/2.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/3.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/4.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/5.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/6.jpg",
+        "width": 2000,
+        "height": 1393
+      },
+      {
+        "src": "/fotografi/familj/7.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/8.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/familj/9.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/familj/10.jpg",
+        "width": 1286,
+        "height": 2048
+      }
     ]
   },
   "modell": {
-    "cover": "/fotografi/modell/1cover.jpg",
+    "cover": {
+      "src": "/fotografi/modell/1cover.jpg",
+      "width": 2000,
+      "height": 1413
+    },
     "images": [
-      "/fotografi/modell/1cover.jpg",
-      "/fotografi/modell/2.jpg",
-      "/fotografi/modell/3.jpg",
-      "/fotografi/modell/4.jpg",
-      "/fotografi/modell/5.jpg",
-      "/fotografi/modell/6.jpg",
-      "/fotografi/modell/7.jpg",
-      "/fotografi/modell/9.jpg",
-      "/fotografi/modell/10.jpg",
-      "/fotografi/modell/11.jpg",
-      "/fotografi/modell/12.jpg",
-      "/fotografi/modell/13.jpg",
-      "/fotografi/modell/14.jpg",
-      "/fotografi/modell/15.jpg",
-      "/fotografi/modell/16.jpg"
+      {
+        "src": "/fotografi/modell/1cover.jpg",
+        "width": 2000,
+        "height": 1413
+      },
+      {
+        "src": "/fotografi/modell/2.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/3.jpg",
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "src": "/fotografi/modell/4.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/5.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/6.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/modell/7.jpg",
+        "width": 2000,
+        "height": 3000
+      },
+      {
+        "src": "/fotografi/modell/9.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/10.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/11.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/12.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/13.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/14.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/15.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/modell/16.jpg",
+        "width": 2000,
+        "height": 1333
+      }
     ]
   }
 }

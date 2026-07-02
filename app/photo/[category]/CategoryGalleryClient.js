@@ -172,6 +172,15 @@ export default function CategoryGalleryClient({ category, cover, images }) {
   };
 
   useEffect(() => {
+    if (typeof window === "undefined" || !window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "instant", block: "start" });
+    });
+  }, []);
+
+  useEffect(() => {
     if (activeImageIndex === null) return;
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -214,8 +223,8 @@ export default function CategoryGalleryClient({ category, cover, images }) {
     const prevImage =
       galleryImages[(activeImageIndex - 1 + totalImages) % totalImages];
 
-    preload(nextImage);
-    preload(prevImage);
+    preload(nextImage?.src);
+    preload(prevImage?.src);
   }, [currentImage, activeImageIndex, totalImages, images]);
 
   return (
@@ -236,7 +245,7 @@ export default function CategoryGalleryClient({ category, cover, images }) {
           {cover ? (
             <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-white/10">
               <Image
-                src={cover}
+                src={cover.src}
                 alt={categoryLabel}
                 fill
                 sizes="(min-width: 1024px) 60vw, 100vw"
@@ -258,24 +267,23 @@ export default function CategoryGalleryClient({ category, cover, images }) {
         </header>
 
         <section className="space-y-6">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
             {galleryImages.map((image, index) => (
               <button
-                key={image}
+                key={image.src}
                 type="button"
                 onClick={() => openImage(index)}
-                className="group block cursor-pointer"
+                className="group mb-4 block w-full cursor-pointer break-inside-avoid overflow-hidden rounded-lg border border-white/10 bg-white/5"
                 aria-label={t("photo.openAlbumAria", { title: categoryLabel })}
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-white/5">
-                  <Image
-                    src={image}
-                    alt={categoryLabel}
-                    fill
-                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
+                <Image
+                  src={image.src}
+                  alt={categoryLabel}
+                  width={image.width}
+                  height={image.height}
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                  className="w-full h-auto transition duration-500 group-hover:scale-105"
+                />
               </button>
             ))}
           </div>
@@ -410,7 +418,7 @@ export default function CategoryGalleryClient({ category, cover, images }) {
 
               <div className="relative w-full flex-1 max-h-[70vh]">
                 <Image
-                  src={currentImage}
+                  src={currentImage.src}
                   alt={`${categoryLabel} ${activeImageIndex + 1}`}
                   fill
                   sizes="100vw"
