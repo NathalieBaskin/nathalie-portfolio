@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../../components/LanguageProvider";
-import { r2 } from "../../lib/media";
 
 function getCategoryLabel(category, t) {
   const labels = {
@@ -138,14 +137,9 @@ function getPriceData(category) {
   return PRICE_DATA[key] || null;
 }
 
-export default function CategoryGalleryClient({
-  category,
-  categoryCover,
-  albums,
-}) {
+export default function CategoryGalleryClient({ category, cover, images }) {
   const { t } = useLanguage();
-  const [activeAlbumIndex, setActiveAlbumIndex] = useState(null);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(null);
 
   const categoryLabel = useMemo(
     () => getCategoryLabel(category, t),
@@ -153,32 +147,18 @@ export default function CategoryGalleryClient({
   );
   const priceData = useMemo(() => getPriceData(category), [category]);
 
-  const normalizedAlbums = useMemo(
-    () =>
-      albums.map((album) => ({
-        ...album,
-        cover: album.cover ? r2(album.cover) : album.cover,
-        images: (album.images || []).map((image) => r2(image)),
-      })),
-    [albums]
-  );
+  const galleryImages = images || [];
+  const totalImages = galleryImages.length;
+  const currentImage =
+    activeImageIndex !== null ? galleryImages[activeImageIndex] : null;
 
-  const activeAlbum =
-    activeAlbumIndex !== null ? normalizedAlbums[activeAlbumIndex] : null;
-  const images = activeAlbum?.images ?? [];
-  const totalImages = images.length;
-  const currentImage = totalImages ? images[activeImageIndex] : null;
-
-  const categoryCoverUrl = categoryCover ? r2(categoryCover) : categoryCover;
-
-  const openAlbum = (index) => {
-    if (!normalizedAlbums[index]?.images?.length) return;
-    setActiveAlbumIndex(index);
-    setActiveImageIndex(0);
+  const openImage = (index) => {
+    if (!galleryImages.length) return;
+    setActiveImageIndex(index);
   };
 
-  const closeAlbum = () => {
-    setActiveAlbumIndex(null);
+  const closeImage = () => {
+    setActiveImageIndex(null);
   };
 
   const goNext = () => {
@@ -192,20 +172,20 @@ export default function CategoryGalleryClient({
   };
 
   useEffect(() => {
-    if (activeAlbumIndex === null) return;
+    if (activeImageIndex === null) return;
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = originalOverflow;
     };
-  }, [activeAlbumIndex]);
+  }, [activeImageIndex]);
 
   useEffect(() => {
-    if (activeAlbumIndex === null) return;
+    if (activeImageIndex === null) return;
     const handleKey = (event) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        closeAlbum();
+        closeImage();
       }
       if (event.key === "ArrowRight") {
         event.preventDefault();
@@ -218,7 +198,7 @@ export default function CategoryGalleryClient({
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [activeAlbumIndex, totalImages]);
+  }, [activeImageIndex, totalImages]);
 
   useEffect(() => {
     if (!currentImage || !totalImages) return;
@@ -230,9 +210,9 @@ export default function CategoryGalleryClient({
       img.src = src;
     };
 
-    const nextImage = images[(activeImageIndex + 1) % totalImages];
+    const nextImage = galleryImages[(activeImageIndex + 1) % totalImages];
     const prevImage =
-      images[(activeImageIndex - 1 + totalImages) % totalImages];
+      galleryImages[(activeImageIndex - 1 + totalImages) % totalImages];
 
     preload(nextImage);
     preload(prevImage);
@@ -253,16 +233,15 @@ export default function CategoryGalleryClient({
           <p className="text-xs uppercase tracking-[0.3em] text-white/50">
             {t("photo.pageTitle")}
           </p>
-          {categoryCoverUrl ? (
+          {cover ? (
             <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-white/10">
               <Image
-                src={categoryCoverUrl}
+                src={cover}
                 alt={categoryLabel}
                 fill
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="object-cover opacity-75"
                 priority
-                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center text-center">
@@ -279,42 +258,29 @@ export default function CategoryGalleryClient({
         </header>
 
         <section className="space-y-6">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {normalizedAlbums.map((album, index) => (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {galleryImages.map((image, index) => (
               <button
-                key={album.id}
+                key={image}
                 type="button"
-                onClick={() => openAlbum(index)}
-                className="group text-left cursor-pointer"
-                aria-label={t("photo.openAlbumAria", { title: album.title })}
+                onClick={() => openImage(index)}
+                className="group block cursor-pointer"
+                aria-label={t("photo.openAlbumAria", { title: categoryLabel })}
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-white/5">
-                  {album.cover ? (
-                    <Image
-                      src={album.cover}
-                      alt={album.title}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                      unoptimized
-                    />
-                  ) : (
-                    <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.3em] text-white/50">
-                      {t("home.photoLabel")}
-                    </div>
-                  )}
-                </div>
-                <div className="mt-3 flex items-center justify-between text-sm text-white/80">
-                  <span className="font-semibold">{album.title}</span>
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50">
-                    {t("photo.albumCount", { count: album.images.length })}
-                  </span>
+                  <Image
+                    src={image}
+                    alt={categoryLabel}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
                 </div>
               </button>
             ))}
           </div>
 
-          {normalizedAlbums.length === 0 ? (
+          {galleryImages.length === 0 ? (
             <p className="text-sm text-white/60">{t("photo.emptyCategory")}</p>
           ) : null}
 
@@ -398,10 +364,10 @@ export default function CategoryGalleryClient({
         </section>
       </div>
 
-      {activeAlbum && currentImage ? (
+      {currentImage ? (
         <div
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm"
-          onClick={closeAlbum}
+          onClick={closeImage}
         >
           <div
             className="relative h-full w-full"
@@ -409,7 +375,7 @@ export default function CategoryGalleryClient({
           >
             <button
               type="button"
-              onClick={closeAlbum}
+              onClick={closeImage}
               aria-label={t("photo.closeModalAria")}
               className="absolute right-5 top-5 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition hover:border-white/60 cursor-pointer"
             >
@@ -436,7 +402,7 @@ export default function CategoryGalleryClient({
 
             <div className="mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-6 py-10">
               <div className="mb-4 flex w-full items-center justify-between text-xs uppercase tracking-[0.3em] text-white/60 z-20">
-                <span>{activeAlbum.title}</span>
+                <span>{categoryLabel}</span>
                 <span>
                   {activeImageIndex + 1}/{totalImages}
                 </span>
@@ -445,11 +411,10 @@ export default function CategoryGalleryClient({
               <div className="relative w-full flex-1 max-h-[70vh]">
                 <Image
                   src={currentImage}
-                  alt={`${activeAlbum.title} ${activeImageIndex + 1}`}
+                  alt={`${categoryLabel} ${activeImageIndex + 1}`}
                   fill
                   sizes="100vw"
                   className="object-contain"
-                  unoptimized
                   priority
                 />
               </div>

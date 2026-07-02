@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../components/LanguageProvider";
-import { r2 } from "../lib/media";
+import photoIndex from "../data/photo-index.json";
 
 export default function PhotoPage() {
   const { t } = useLanguage();
@@ -12,28 +12,28 @@ export default function PhotoPage() {
     {
       id: "photo-wedding",
       slug: "brollop-och-forlovning",
-      cover: r2("/fotografi/brollop-och-forlovning/Luisa och Muslim/13.jpg"),
+      cover: photoIndex["brollop-och-forlovning"]?.cover ?? null,
       title: t("photo.categories.wedding"),
       caption: t("photo.categoryCaptions.wedding"),
     },
     {
       id: "photo-children",
       slug: "barn",
-      cover: r2("/fotografi/barn/cover.barn.jpg"),
+      cover: photoIndex["barn"]?.cover ?? null,
       title: t("photo.categories.children"),
       caption: t("photo.categoryCaptions.children"),
     },
     {
       id: "photo-family",
       slug: "familj",
-      cover: r2("/fotografi/familj/Isabelle och Joakim/Bella-22.jpg"),
+      cover: photoIndex["familj"]?.cover ?? null,
       title: t("photo.categories.family"),
       caption: t("photo.categoryCaptions.family"),
     },
     {
       id: "photo-model",
       slug: "modell",
-      cover: r2("/fotografi/modell/Cassie och Sofia/sofia.jpg"),
+      cover: photoIndex["modell"]?.cover ?? null,
       title: t("photo.categories.model"),
       caption: t("photo.categoryCaptions.model"),
     },

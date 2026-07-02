@@ -14,6 +14,10 @@ function isImageFile(name) {
   return IMAGE_EXTENSIONS.has(path.extname(name).toLowerCase());
 }
 
+function isCoverFile(name) {
+  return /cover/i.test(path.parse(name).name);
+}
+
 function extractNumber(name) {
   const match = name.match(/\d+/);
   return match ? Number(match[0]) : null;
@@ -47,56 +51,23 @@ function buildIndex() {
 
   for (const category of categories) {
     const categoryDir = path.join(baseDir, category);
-    const entries = fs.readdirSync(categoryDir, { withFileTypes: true });
+    const files = fs
+      .readdirSync(categoryDir, { withFileTypes: true })
+      .filter((entry) => entry.isFile())
+      .map((entry) => entry.name)
+      .filter(isImageFile);
 
-    const coverEntry = entries.find(
-      (entry) =>
-        entry.isFile() &&
-        entry.name.toLowerCase().startsWith(`cover.${category.toLowerCase()}.`)
+    const coverFile = files.find(isCoverFile);
+    const restSorted = sortByNumber(
+      files.filter((name) => name !== coverFile)
     );
-    const categoryCover = coverEntry
-      ? `/fotografi/${category}/${coverEntry.name}`
-      : null;
-
-    const albumDirs = entries
-      .filter((entry) => entry.isDirectory())
-      .sort((a, b) =>
-        a.name.localeCompare(b.name, "sv", { numeric: true, sensitivity: "base" })
-      );
-
-    const albums = albumDirs
-      .map((dir) => {
-        const albumDir = path.join(categoryDir, dir.name);
-        const files = fs
-          .readdirSync(albumDir, { withFileTypes: true })
-          .filter((entry) => entry.isFile())
-          .map((entry) => entry.name)
-          .filter(isImageFile);
-
-        const coverFile = files.find((name) => /^\d+\.cover\./i.test(name));
-        const images = sortByNumber(
-          files.filter((name) => !name.toLowerCase().startsWith("cover."))
-        );
-        const cover = coverFile
-          ? `/fotografi/${category}/${dir.name}/${coverFile}`
-          : images[0]
-            ? `/fotografi/${category}/${dir.name}/${images[0]}`
-            : null;
-
-        return {
-          id: dir.name,
-          title: dir.name,
-          cover,
-          images: images.map(
-            (name) => `/fotografi/${category}/${dir.name}/${name}`
-          ),
-        };
-      })
-      .filter((album) => album.images.length > 0);
+    const orderedFiles = coverFile ? [coverFile, ...restSorted] : restSorted;
 
     index[category] = {
-      categoryCover,
-      albums,
+      cover: coverFile ? `/fotografi/${category}/${coverFile}` : orderedFiles[0]
+        ? `/fotografi/${category}/${orderedFiles[0]}`
+        : null,
+      images: orderedFiles.map((name) => `/fotografi/${category}/${name}`),
     };
   }
 

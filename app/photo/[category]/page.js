@@ -12,13 +12,13 @@ export function generateStaticParams() {
 export default async function PhotoCategoryPage({ params }) {
   const { category: categoryParam } = (await params) || {};
   const category = decodeURIComponent(categoryParam || "");
-  const entry = photoIndex[category] || { categoryCover: null, albums: [] };
+  const entry = photoIndex[category] || { cover: null, images: [] };
 
   return (
     <CategoryGalleryClient
       category={category}
-      categoryCover={entry.categoryCover}
-      albums={entry.albums}
+      cover={entry.cover}
+      images={entry.images}
     />
   );
 }
