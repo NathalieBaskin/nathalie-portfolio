@@ -66,11 +66,6 @@
         "height": 1333
       },
       {
-        "src": "/fotografi/brollop-och-forlovning/6.jpg",
-        "width": 2000,
-        "height": 1333
-      },
-      {
         "src": "/fotografi/brollop-och-forlovning/7.jpg",
         "width": 2000,
         "height": 1333
@@ -98,7 +93,7 @@
       {
         "src": "/fotografi/brollop-och-forlovning/12.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 3000
       },
       {
         "src": "/fotografi/brollop-och-forlovning/13.jpg",
@@ -119,6 +114,21 @@
         "src": "/fotografi/brollop-och-forlovning/16.jpg",
         "width": 2000,
         "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/17.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/18.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/fotografi/brollop-och-forlovning/19.jpg",
+        "width": 1800,
+        "height": 1200
       }
     ]
   },
@@ -178,6 +188,11 @@
         "src": "/fotografi/familj/10.jpg",
         "width": 1286,
         "height": 2048
+      },
+      {
+        "src": "/fotografi/familj/11.jpg",
+        "width": 2000,
+        "height": 1333
       }
     ]
   },
