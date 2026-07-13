@@ -104,8 +104,8 @@ const PRICE_DATA = {
     title: "Modell",
     intro: "Priset gäller fotografering av 1 person.",
     blocks: [
-      { title: "2 timmar", price: "2 000 kr" },
-      { title: "4 timmar", price: "3 500 kr" },
+      { title: "1 timme", price: "3 000 kr" },
+      { title: "2 timmar", price: "4 000 kr" },
     ],
     footnote: "500 kr tillägg per person.",
   },
