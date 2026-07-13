@@ -92,43 +92,22 @@ const PRICE_DATA = {
   },
   barn: {
     title: "Barn",
+    intro: "Priser gäller fotografering av 1 barn.",
     blocks: [
-      {
-        title: "Ett barn",
-        lines: ["2 timmar - 1 500 kr"],
-      },
-      {
-        title: "Två barn",
-        lines: ["2 timmar - 2 500 kr", "4 timmar - 4 000 kr"],
-      },
-      {
-        title: "Tre barn",
-        lines: ["2 timmar - 4 000 kr", "4 timmar - 5 500 kr"],
-      },
-      {
-        title: "Fyra barn",
-        lines: ["2 timmar - 6 000 kr", "4 timmar - 7 500 kr"],
-      },
+      { title: "1 timme", price: "2 000 kr" },
+      { title: "2 timmar", price: "3 000 kr" },
+      { title: "3 timmar", price: "4 000 kr" },
     ],
-    footnote: "Fler än 4 barn - tillägg 1 500 kr per barn.",
+    footnote: "500 kr tillägg per barn.",
   },
   modell: {
     title: "Modell",
+    intro: "Priset gäller fotografering av 1 person.",
     blocks: [
-      {
-        title: "En person",
-        lines: ["2 timmar - 2 000 kr", "4 timmar - 3 500 kr"],
-      },
-      {
-        title: "Två personer",
-        lines: ["2 timmar - 3 000 kr", "4 timmar - 4 500 kr"],
-      },
-      {
-        title: "Tre personer",
-        lines: ["2 timmar - 4 500 kr", "4 timmar - 6 000 kr"],
-      },
+      { title: "2 timmar", price: "2 000 kr" },
+      { title: "4 timmar", price: "3 500 kr" },
     ],
-    footnote: "Fler än 3 personer - 1 000 kr tillägg per person.",
+    footnote: "500 kr tillägg per person.",
   },
 };
 
@@ -301,6 +280,9 @@ export default function CategoryGalleryClient({ category, cover, images }) {
                 {t("photo.pricesTitle")}
               </h2>
               <p className="text-white/60">{priceData.title}</p>
+              {priceData.intro ? (
+                <p className="mt-2 text-sm text-white/70">{priceData.intro}</p>
+              ) : null}
 
               <div className="mt-6 grid gap-6 md:grid-cols-2">
                 {priceData.blocks.map((block) => (
