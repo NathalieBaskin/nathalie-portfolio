@@ -76,14 +76,14 @@ const PRICE_DATA = {
     blocks: [
       {
         title: "Small",
-        price: "2 000 kr",
+        price: "4 000 kr",
         duration: "2 timmar",
         description:
           "Passar för familj på 2-4 personer/gravidfoto med 1-2 fotoplatser i näravstånd.",
       },
       {
         title: "Medium",
-        price: "3 500 kr",
+        price: "5 500 kr",
         duration: "4 timmar",
         description:
           "Passar för familj på 4-6 med 2-4 fotoplatser i näravstånd.",
